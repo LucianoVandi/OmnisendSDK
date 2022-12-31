@@ -1,0 +1,14 @@
+version: '2'
+services:
+  omnisend_api:
+    image: omnisend/php:1.0
+    container_name: omnisend_api
+    build: ./docker
+#    ports:
+#      - "9000:9000"
+    volumes:
+      - ./:/var/www/
+      - ./docker/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    environment:
+      - "COMPOSER_MEMORY_LIMIT=-1"
+      - "API_KEY=${API_KEY}"

@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+
+require_once 'vendor/autoload.php';
+
+use Lvandi\OmnisendSDK\Client;
+use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
+
+$client = new Client(
+    new GuzzleClientFactory(
+        getenv('API_KEY')
+    )
+);
+
+$response = $client->getEventsApi()->get('639f232ae32347001e1d36c2');
+
+if ($error = $client->getError()) {
+    print_r($error);
+    exit(2);
+}
+
+print_r($response->getEvent());
+
+exit(1);

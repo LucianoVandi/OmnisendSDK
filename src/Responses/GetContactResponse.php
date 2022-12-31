@@ -1,0 +1,28 @@
+<?php
+
+namespace Lvandi\OmnisendSDK\Responses;
+
+use Lvandi\OmnisendSDK\DTO\Contact;
+use Psr\Http\Message\ResponseInterface;
+
+class GetContactResponse extends BaseResponse
+{
+    private Contact $contact;
+
+    public function __construct(ResponseInterface $response)
+    {
+        parent::__construct($response);
+
+        $body = json_decode($response->getBody());
+
+        $this->contact = Contact::fromRawData($body);
+    }
+
+    /**
+     * @return Contact
+     */
+    public function getContact(): Contact
+    {
+        return $this->contact;
+    }
+}
