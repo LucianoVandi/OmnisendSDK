@@ -1,0 +1,14 @@
+parameters:
+    paths:
+        - src
+        - examples
+    level: 7
+    inferPrivatePropertyTypeFromConstructor: true
+    checkMissingIterableValueType: false
+    cognitive_complexity:
+        class: 50
+        function: 12
+#    excludePaths:
+#        - %currentWorkingDirectory%/path/to/exclude/*
+#    ignoreErrors:
+#        - '#Access to an undefined property App\Acme\Requests\(.*)::$.*#'

@@ -1,0 +1,28 @@
+{
+    "productID": "123",
+    "title": "Test Product",
+    "status": "inStock",
+    "description": "",
+    "currency": "EUR",
+    "images": [],
+    "productUrl": "https://sorgentenatura.it/p/test-product-123",
+    "vendor": "",
+    "type": "",
+    "categoryIDs": null,
+    "tags": null,
+    "createdAt": "2022-12-27T23:31:10.78Z",
+    "updatedAt": "2022-12-27T23:31:10.78Z",
+    "variants": [
+        {
+            "variantID": "123_1",
+            "title": "Red",
+            "sku": "9788488428111",
+            "price": 1000,
+            "oldPrice": 0,
+            "productUrl": "",
+            "status": "inStock",
+            "imageID": "",
+            "customFields": null
+        }
+    ]
+}
