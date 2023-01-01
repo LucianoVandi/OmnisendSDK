@@ -10,7 +10,7 @@ use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
 
 $client = new Client(
     new GuzzleClientFactory(
-        getenv('API_KEY')
+        (string) getenv('API_KEY')
     )
 );
 

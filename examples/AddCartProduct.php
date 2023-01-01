@@ -9,7 +9,7 @@ use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
 
 $client = new Client(
     new GuzzleClientFactory(
-        getenv('API_KEY')
+        (string) getenv('API_KEY')
     )
 );
 
@@ -20,7 +20,7 @@ $cartProduct = CartProduct::fromRawData([
     'title' => 'Test Product 2',
     'quantity' => 10,
     'price' => 444,
-    'currency' => 'EUR'
+    'currency' => 'EUR',
 ]);
 
 $response = $client->getCartsApi()->addProduct('1234', $cartProduct);

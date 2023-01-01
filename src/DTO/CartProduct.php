@@ -310,8 +310,7 @@ class CartProduct implements \JsonSerializable
     public function setCurrency(?string $currency): CartProduct
     {
         $this->currency = $currency;
+
         return $this;
     }
-
-
 }
