@@ -4,6 +4,7 @@ namespace Lvandi\OmnisendSDK;
 
 use Lvandi\OmnisendSDK\Resources\Carts;
 use Lvandi\OmnisendSDK\Resources\Events;
+use Lvandi\OmnisendSDK\Resources\Orders;
 use Lvandi\OmnisendSDK\Resources\Contacts;
 use Lvandi\OmnisendSDK\Resources\Products;
 use Lvandi\OmnisendSDK\Contracts\HttpClient;
@@ -56,6 +57,11 @@ class Client
     public function getCartsApi(): Carts
     {
         return new Carts($this->httpClient);
+    }
+
+    public function getOrdersApi(): Orders
+    {
+        return new Orders($this->httpClient);
     }
 
     public function getError(): array

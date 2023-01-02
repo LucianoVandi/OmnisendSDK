@@ -13,6 +13,7 @@ abstract class BaseResource
         $this->httpClient = $httpClient;
     }
 
+    // todo: rename to apply
     protected function getFilters(array $filters): array
     {
         $queryParams = [];
