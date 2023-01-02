@@ -10,6 +10,7 @@ class Order implements \JsonSerializable
 
     public const PAYMENT_AWAITING = 'awaitingPayment';
     public const PAYMENT_PARTIALLY_PAID = 'partiallyPaid';
+    public const PAYMENT_PAID = 'paid';
     public const PAYMENT_PARTIALLY_REFUNDED = 'partiallyRefunded';
     public const PAYMENT_REFUNDED = 'refunded';
     public const PAYMENT_VOIDED = 'voided';
@@ -17,6 +18,7 @@ class Order implements \JsonSerializable
     private const PAYMENT_STATUSES = [
         self::PAYMENT_AWAITING,
         self::PAYMENT_PARTIALLY_PAID,
+        self::PAYMENT_PAID,
         self::PAYMENT_PARTIALLY_REFUNDED,
         self::PAYMENT_REFUNDED,
         self::PAYMENT_VOIDED,
@@ -28,7 +30,7 @@ class Order implements \JsonSerializable
     public const ORDER_DELIVERED = 'delivered';
     public const ORDER_RESTOCKED = 'restocked';
 
-    private const FULFILLMENT_STATUSES = [
+    public const FULFILLMENT_STATUSES = [
         self::ORDER_UNFULFILLED,
         self::ORDER_IN_PROGRESS,
         self::ORDER_FULFILLED,
@@ -40,10 +42,20 @@ class Order implements \JsonSerializable
     public const DISCOUNT_FIXED_AMOUNT = 'fixedAmount';
     public const DISCOUNT_FREE_SHIPPING = 'freeShipping';
 
-    private const DISCOUNT_TYPES = [
+    public const DISCOUNT_TYPES = [
         self::DISCOUNT_PERCENTAGE,
         self::DISCOUNT_FIXED_AMOUNT,
         self::DISCOUNT_FREE_SHIPPING,
+    ];
+
+    public const SORT_CREATED_AT = 'createdAt';
+    public const SORT_UPDATED_AT = 'updatedAt';
+    public const SORT_ORDER_SUM = 'orderSum';
+
+    public const SORT_TYPES = [
+        self::SORT_CREATED_AT,
+        self::SORT_UPDATED_AT,
+        self::SORT_ORDER_SUM,
     ];
 
     private ?string $orderID;
@@ -144,8 +156,8 @@ class Order implements \JsonSerializable
             ? $data->paymentStatus
             : null;
 
-        $fulfillmentStatus = in_array($data->orderStatus, self::FULFILLMENT_STATUSES)
-            ? $data->orderStatus
+        $fulfillmentStatus = in_array($data->fulfillmentStatus, self::FULFILLMENT_STATUSES)
+            ? $data->fulfillmentStatus
             : null;
 
         $discountType = in_array($data->discountType, self::DISCOUNT_TYPES)
