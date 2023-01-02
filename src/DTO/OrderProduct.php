@@ -2,40 +2,55 @@
 
 namespace Lvandi\OmnisendSDK\DTO;
 
-use InvalidArgumentException;
-
 class OrderProduct implements \JsonSerializable
 {
     use JsonSerializeTrait;
 
-    public ?string $productID;
+    private ?string $productID;
 
-    public ?string $sku;
+    private ?string $sku;
 
-    public ?string $variantID;
+    private ?string $variantID;
 
-    public ?string $variantTitle;
+    private ?string $variantTitle;
 
-    public ?string $title;
+    private ?string $title;
 
-    public ?string $vendor;
+    private ?string $vendor;
 
-    public ?int $quantity;
+    private ?int $quantity;
 
-    public ?int $price;
+    private ?int $price;
 
-    public ?int $discount;
+    private ?int $discount;
 
-    public ?int $weight;
+    private ?int $weight;
 
-    public ?string $imageUrl;
+    private ?string $imageUrl;
 
-    public ?string $productUrl;
+    private ?string $productUrl;
 
-    /** @var array<string>|null  */
-    public ?array $categoryIDs;
+    /** @var array<string>|null */
+    private ?array $categoryIDs;
 
-    /** @var array<string>|null  */
-    public ?array $tags;
+    /** @var array<string>|null */
+    private ?array $tags;
 
+    public function __construct(\stdClass $product)
+    {
+        $this->productID = $product->productID;
+        $this->variantID = $product->variantID;
+        $this->sku = $product->sku;
+        $this->variantTitle = $product->variantTitle;
+        $this->title = $product->title;
+        $this->vendor = $product->vendor;
+        $this->quantity = $product->quantity;
+        $this->price = $product->price;
+        $this->discount = $product->discount;
+        $this->weight = $product->weight;
+        $this->imageUrl = $product->imageUrl;
+        $this->productUrl = $product->productUrl;
+        $this->categoryIDs = $product->categoryIDs;
+        $this->tags = $product->tags;
+    }
 }
