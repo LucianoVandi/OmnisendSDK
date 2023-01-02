@@ -146,7 +146,7 @@ class Carts extends BaseResource
         ];
 
         if (! empty($filters)) {
-            $queryParams = array_merge($queryParams, $this->getFilters($filters));
+            $queryParams = array_merge($queryParams, $this->applyListFilters($filters));
         }
 
         $response = $this->httpClient->sendRequest($this->endpoint, 'GET', [
