@@ -1,0 +1,420 @@
+{
+    "products": [
+        {
+            "productID": "86076",
+            "title": "AltriCereali - Amaranto Flakes Bio",
+            "status": "inStock",
+            "description": "",
+            "currency": "EUR",
+            "images": [
+                {
+                    "imageID": "86076",
+                    "url": "https://static-sn.dev.nm/data/prod/vetrina/a/altricereali-flakes-amaranto.jpg?_=",
+                    "isDefault": true,
+                    "variantIDs": [
+                        "86076"
+                    ]
+                }
+            ],
+            "productUrl": "https://sn.dev.nm/p/altricereali-amaranto-flakes-bio",
+            "vendor": "Probios",
+            "type": "",
+            "categoryIDs": [
+                "tblMetaCat11",
+                "tblCat101",
+                "tblSubcat692"
+            ],
+            "tags": null,
+            "createdAt": "2022-02-22T11:37:27.411Z",
+            "updatedAt": "2022-02-22T11:37:27.411Z",
+            "variants": [
+                {
+                    "variantID": "86076",
+                    "title": "AltriCereali - Amaranto Flakes Bio",
+                    "sku": "V0026615",
+                    "price": 403,
+                    "oldPrice": 403,
+                    "productUrl": "https://sn.dev.nm/p/altricereali-amaranto-flakes-bio?id=86076",
+                    "status": "inStock",
+                    "imageID": "86076",
+                    "customFields": null
+                }
+            ]
+        },
+        {
+            "productID": "86075",
+            "title": "AltriCereali - Quinoa Flakes  Bio",
+            "status": "inStock",
+            "description": "",
+            "currency": "EUR",
+            "images": [
+                {
+                    "imageID": "86075",
+                    "url": "https://static-sn.dev.nm/data/prod/vetrina/a/altricereali-flakes-quinoa.jpg?_=",
+                    "isDefault": true,
+                    "variantIDs": [
+                        "86075"
+                    ]
+                }
+            ],
+            "productUrl": "https://sn.dev.nm/p/altricereali-quinoa-flakes-bio",
+            "vendor": "Probios",
+            "type": "",
+            "categoryIDs": [
+                "tblMetaCat11",
+                "tblCat101",
+                "tblSubcat692"
+            ],
+            "tags": null,
+            "createdAt": "2022-02-22T11:37:27.226Z",
+            "updatedAt": "2022-02-22T11:37:27.226Z",
+            "variants": [
+                {
+                    "variantID": "86075",
+                    "title": "AltriCereali - Quinoa Flakes  Bio",
+                    "sku": "V0026616",
+                    "price": 487,
+                    "oldPrice": 487,
+                    "productUrl": "https://sn.dev.nm/p/altricereali-quinoa-flakes-bio?id=86075",
+                    "status": "inStock",
+                    "imageID": "86075",
+                    "customFields": null
+                }
+            ]
+        },
+        {
+            "productID": "86073",
+            "title": "AltriCereali - Saraceno Flakes Bio",
+            "status": "inStock",
+            "description": "",
+            "currency": "EUR",
+            "images": [
+                {
+                    "imageID": "86073",
+                    "url": "https://static-sn.dev.nm/data/prod/vetrina/a/altricereali-flakes-saraceno.jpg?_=",
+                    "isDefault": true,
+                    "variantIDs": [
+                        "86073"
+                    ]
+                }
+            ],
+            "productUrl": "https://sn.dev.nm/p/altricereali-saraceno-flakes-bio",
+            "vendor": "Probios",
+            "type": "",
+            "categoryIDs": [
+                "tblMetaCat11",
+                "tblCat101",
+                "tblSubcat692"
+            ],
+            "tags": null,
+            "createdAt": "2022-02-22T11:37:27.043Z",
+            "updatedAt": "2022-02-22T11:37:27.043Z",
+            "variants": [
+                {
+                    "variantID": "86073",
+                    "title": "AltriCereali - Saraceno Flakes Bio",
+                    "sku": "V0026617",
+                    "price": 398,
+                    "oldPrice": 398,
+                    "productUrl": "https://sn.dev.nm/p/altricereali-saraceno-flakes-bio?id=86073",
+                    "status": "inStock",
+                    "imageID": "86073",
+                    "customFields": null
+                }
+            ]
+        },
+        {
+            "productID": "86033",
+            "title": "Tempestina di Farro Bianco - Pastina per Minestra",
+            "status": "inStock",
+            "description": "",
+            "currency": "EUR",
+            "images": [
+                {
+                    "imageID": "86033",
+                    "url": "https://static-sn.dev.nm/data/prod/vetrina/p/probios-pasta-farro-tempestina.jpg?_=",
+                    "isDefault": true,
+                    "variantIDs": [
+                        "86033"
+                    ]
+                }
+            ],
+            "productUrl": "https://sn.dev.nm/p/tempestina-di-farro-bianco-pastina-per-minestra",
+            "vendor": "Probios",
+            "type": "",
+            "categoryIDs": [
+                "tblMetaCat11",
+                "tblCat91",
+                "tblSubcat592"
+            ],
+            "tags": null,
+            "createdAt": "2022-02-22T11:37:24.08Z",
+            "updatedAt": "2022-02-22T11:37:24.08Z",
+            "variants": [
+                {
+                    "variantID": "86033",
+                    "title": "Tempestina di Farro Bianco - Pastina per Minestra",
+                    "sku": "V0026452",
+                    "price": 330,
+                    "oldPrice": 330,
+                    "productUrl": "https://sn.dev.nm/p/tempestina-di-farro-bianco-pastina-per-minestra?id=86033",
+                    "status": "notAvailable",
+                    "imageID": "86033",
+                    "customFields": null
+                }
+            ]
+        },
+        {
+            "productID": "86032",
+            "title": "Stelline di Farro Integrale - Pastina per Minestra",
+            "status": "inStock",
+            "description": "",
+            "currency": "EUR",
+            "images": [
+                {
+                    "imageID": "86032",
+                    "url": "https://static-sn.dev.nm/data/prod/vetrina/p/probios-pasta-farro-stelline.jpg?_=",
+                    "isDefault": true,
+                    "variantIDs": [
+                        "86032"
+                    ]
+                }
+            ],
+            "productUrl": "https://sn.dev.nm/p/stelline-di-farro-integrale-pastina-per-minestra",
+            "vendor": "Probios",
+            "type": "",
+            "categoryIDs": [
+                "tblMetaCat11",
+                "tblCat91",
+                "tblSubcat592"
+            ],
+            "tags": null,
+            "createdAt": "2022-02-22T11:37:23.896Z",
+            "updatedAt": "2022-02-22T11:37:23.896Z",
+            "variants": [
+                {
+                    "variantID": "86032",
+                    "title": "Stelline di Farro Integrale - Pastina per Minestra",
+                    "sku": "V0026448",
+                    "price": 282,
+                    "oldPrice": 282,
+                    "productUrl": "https://sn.dev.nm/p/stelline-di-farro-integrale-pastina-per-minestra?id=86032",
+                    "status": "inStock",
+                    "imageID": "86032",
+                    "customFields": null
+                }
+            ]
+        },
+        {
+            "productID": "86027",
+            "title": "Penne Rigate di Farro Integrale",
+            "status": "inStock",
+            "description": "",
+            "currency": "EUR",
+            "images": [
+                {
+                    "imageID": "86027",
+                    "url": "https://static-sn.dev.nm/data/prod/vetrina/p/probios-pasta-farro-penne.jpg?_=",
+                    "isDefault": true,
+                    "variantIDs": [
+                        "86027"
+                    ]
+                }
+            ],
+            "productUrl": "https://sn.dev.nm/p/penne-rigate-di-farro-integrale",
+            "vendor": "Probios",
+            "type": "",
+            "categoryIDs": [
+                "tblMetaCat11",
+                "tblCat91",
+                "tblSubcat592"
+            ],
+            "tags": null,
+            "createdAt": "2022-02-22T11:37:23.707Z",
+            "updatedAt": "2022-02-22T11:37:23.707Z",
+            "variants": [
+                {
+                    "variantID": "86027",
+                    "title": "Penne Rigate di Farro Integrale",
+                    "sku": "V0026447",
+                    "price": 282,
+                    "oldPrice": 282,
+                    "productUrl": "https://sn.dev.nm/p/penne-rigate-di-farro-integrale?id=86027",
+                    "status": "inStock",
+                    "imageID": "86027",
+                    "customFields": null
+                }
+            ]
+        },
+        {
+            "productID": "86026",
+            "title": "Gobboni di Farro Integrale",
+            "status": "inStock",
+            "description": "",
+            "currency": "EUR",
+            "images": [
+                {
+                    "imageID": "86026",
+                    "url": "https://static-sn.dev.nm/data/prod/vetrina/p/probios-pasta-farro-gobboni.jpg?_=",
+                    "isDefault": true,
+                    "variantIDs": [
+                        "86026"
+                    ]
+                }
+            ],
+            "productUrl": "https://sn.dev.nm/p/gobboni-di-farro-integrale",
+            "vendor": "Probios",
+            "type": "",
+            "categoryIDs": [
+                "tblMetaCat11",
+                "tblCat91",
+                "tblSubcat592"
+            ],
+            "tags": null,
+            "createdAt": "2022-02-22T11:37:23.475Z",
+            "updatedAt": "2022-02-22T11:37:23.475Z",
+            "variants": [
+                {
+                    "variantID": "86026",
+                    "title": "Gobboni di Farro Integrale",
+                    "sku": "V0026453",
+                    "price": 282,
+                    "oldPrice": 282,
+                    "productUrl": "https://sn.dev.nm/p/gobboni-di-farro-integrale?id=86026",
+                    "status": "inStock",
+                    "imageID": "86026",
+                    "customFields": null
+                }
+            ]
+        },
+        {
+            "productID": "86019",
+            "title": "Break Bio - Farro Cake al Cioccolato",
+            "status": "inStock",
+            "description": "",
+            "currency": "EUR",
+            "images": [
+                {
+                    "imageID": "86019",
+                    "url": "https://static-sn.dev.nm/data/prod/vetrina/p/probios-farro-cake-cioccolato.jpg?_=",
+                    "isDefault": true,
+                    "variantIDs": [
+                        "86019"
+                    ]
+                }
+            ],
+            "productUrl": "https://sn.dev.nm/p/break-bio-farro-cake-al-cioccolato",
+            "vendor": "Probios",
+            "type": "",
+            "categoryIDs": [
+                "tblMetaCat11",
+                "tblCat135",
+                "tblSubcat973"
+            ],
+            "tags": null,
+            "createdAt": "2022-02-22T11:37:22.837Z",
+            "updatedAt": "2022-02-22T11:37:22.837Z",
+            "variants": [
+                {
+                    "variantID": "86019",
+                    "title": "Break Bio - Farro Cake al Cioccolato",
+                    "sku": "V0026438",
+                    "price": 319,
+                    "oldPrice": 319,
+                    "productUrl": "https://sn.dev.nm/p/break-bio-farro-cake-al-cioccolato?id=86019",
+                    "status": "inStock",
+                    "imageID": "86019",
+                    "customFields": null
+                }
+            ]
+        },
+        {
+            "productID": "86018",
+            "title": "Break Bio - Farro Cake al Naturale",
+            "status": "inStock",
+            "description": "",
+            "currency": "EUR",
+            "images": [
+                {
+                    "imageID": "86018",
+                    "url": "https://static-sn.dev.nm/data/prod/vetrina/p/probios-farro-cake.jpg?_=",
+                    "isDefault": true,
+                    "variantIDs": [
+                        "86018"
+                    ]
+                }
+            ],
+            "productUrl": "https://sn.dev.nm/p/break-bio-farro-cake-al-naturale",
+            "vendor": "Probios",
+            "type": "",
+            "categoryIDs": [
+                "tblMetaCat11",
+                "tblCat135",
+                "tblSubcat973"
+            ],
+            "tags": null,
+            "createdAt": "2022-02-22T11:37:22.602Z",
+            "updatedAt": "2022-02-22T11:37:22.602Z",
+            "variants": [
+                {
+                    "variantID": "86018",
+                    "title": "Break Bio - Farro Cake al Naturale",
+                    "sku": "V0026437",
+                    "price": 262,
+                    "oldPrice": 309,
+                    "productUrl": "https://sn.dev.nm/p/break-bio-farro-cake-al-naturale?id=86018",
+                    "status": "inStock",
+                    "imageID": "86018",
+                    "customFields": null
+                }
+            ]
+        },
+        {
+            "productID": "86011",
+            "title": "Rice & Rice - Riso Thaibonnet Integrale",
+            "status": "inStock",
+            "description": "",
+            "currency": "EUR",
+            "images": [
+                {
+                    "imageID": "86011",
+                    "url": "https://static-sn.dev.nm/data/prod/vetrina/r/rice-rice-riso-thaibonnet.jpg?_=",
+                    "isDefault": true,
+                    "variantIDs": [
+                        "86011"
+                    ]
+                }
+            ],
+            "productUrl": "https://sn.dev.nm/p/rice-rice-riso-thaibonnet-integrale",
+            "vendor": "Probios",
+            "type": "",
+            "categoryIDs": [
+                "tblMetaCat11",
+                "tblCat92",
+                "tblSubcat616"
+            ],
+            "tags": null,
+            "createdAt": "2022-02-22T11:37:21.824Z",
+            "updatedAt": "2022-02-22T11:37:21.824Z",
+            "variants": [
+                {
+                    "variantID": "86011",
+                    "title": "Rice & Rice - Riso Thaibonnet Integrale",
+                    "sku": "V0026445",
+                    "price": 378,
+                    "oldPrice": 378,
+                    "productUrl": "https://sn.dev.nm/p/rice-rice-riso-thaibonnet-integrale?id=86011",
+                    "status": "inStock",
+                    "imageID": "86011",
+                    "customFields": null
+                }
+            ]
+        }
+    ],
+    "paging": {
+        "previous": null,
+        "next": "https://api.omnisend.com/v3/products?limit=10&offset=10&sort=createdAt&vendor=Probios",
+        "offset": 0,
+        "limit": 10
+    }
+}

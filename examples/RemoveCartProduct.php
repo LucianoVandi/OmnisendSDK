@@ -4,6 +4,7 @@
 require_once 'vendor/autoload.php';
 
 use Lvandi\OmnisendSDK\Client;
+use Lvandi\OmnisendSDK\DTO\CartProduct;
 use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
 
 $client = new Client(
@@ -12,17 +13,13 @@ $client = new Client(
     )
 );
 
-$response = $client->getCartsApi()->list(null, 1, 0, 'createdAt');
+$response = $client->getCartsApi()->removeProduct('1234', 'c_12345');
 
 if ($error = $client->getError()) {
     print_r($error);
     exit(2);
 }
 
-var_dump($response->getCarts());
-
-if(function_exists('generateFixtureFromResponse')){
-    generateFixtureFromResponse(__FILE__, $response);
-}
+var_dump($response);
 
 exit(1);

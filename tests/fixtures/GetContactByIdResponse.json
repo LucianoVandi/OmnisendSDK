@@ -2,7 +2,7 @@
     "email": "vandi.luciano@gmail.com",
     "contactID": "63a0de5889048e001d91624b",
     "createdAt": "2022-12-19T21:57:44Z",
-    "firstName": "",
+    "firstName": "Luciano",
     "lastName": "",
     "country": "",
     "countryCode": "",
@@ -19,7 +19,8 @@
     "clicked": 0,
     "status": "nonSubscribed",
     "tags": [
-        "ezeedesk"
+        "ezeedesk",
+        "updated"
     ],
     "segments": [
         "62446f6256cf857313d3bc39"
@@ -35,7 +36,7 @@
             "channels": {
                 "email": {
                     "status": "nonSubscribed",
-                    "statusDate": "2022-12-24T13:19:06.107Z"
+                    "statusDate": "2023-01-03T09:08:27.289Z"
                 }
             }
         }

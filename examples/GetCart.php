@@ -21,4 +21,8 @@ if ($error = $client->getError()) {
 
 var_dump($response->getCart());
 
+if(function_exists('generateFixtureFromResponse')){
+    generateFixtureFromResponse(__FILE__, $response);
+}
+
 exit(1);

@@ -1,0 +1,39 @@
+{
+    "carts": [
+        {
+            "contactID": "63a0de5889048e001d91624b",
+            "cartID": "1234",
+            "email": "vandi.luciano@gmail.com",
+            "phone": "",
+            "currency": "EUR",
+            "cartRecoveryUrl": "https://mycart.com",
+            "createdAt": "2023-01-03T09:08:08.707Z",
+            "updatedAt": "2023-01-03T09:08:08.707Z",
+            "emailID": null,
+            "attributionID": "",
+            "cartSum": 1000,
+            "products": [
+                {
+                    "cartProductID": "c_1234",
+                    "productID": "1234",
+                    "variantID": "1234",
+                    "title": "Test Product",
+                    "description": "",
+                    "quantity": 1,
+                    "price": 333,
+                    "oldPrice": null,
+                    "discount": 0,
+                    "productUrl": "",
+                    "imageUrl": "",
+                    "sku": ""
+                }
+            ]
+        }
+    ],
+    "paging": {
+        "previous": null,
+        "next": "https://api.omnisend.com/v3/carts?limit=1&offset=1&sort=createdAt",
+        "offset": 0,
+        "limit": 1
+    }
+}

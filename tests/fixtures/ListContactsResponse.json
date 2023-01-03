@@ -1,0 +1,116 @@
+{
+    "contacts": [
+        {
+            "email": "conti.nimaia+sn@gmail.com",
+            "contactID": "61a49719596ac4001ca25907",
+            "createdAt": "2021-11-29T09:02:17Z",
+            "firstName": "m",
+            "lastName": "",
+            "country": "",
+            "countryCode": "",
+            "state": "",
+            "city": "",
+            "postalCode": "",
+            "address": "",
+            "gender": "",
+            "phone": null,
+            "phoneNumber": "",
+            "birthdate": "",
+            "sent": 0,
+            "opened": 0,
+            "clicked": 0,
+            "status": "unsubscribed",
+            "tags": null,
+            "segments": null,
+            "statuses": [
+                {
+                    "status": "unsubscribed",
+                    "date": "2021-10-04T07:23:45Z"
+                }
+            ],
+            "optIns": null,
+            "doubleOptIns": null,
+            "customProperties": {
+                "inattivo": "0",
+                "punti_natura": "50",
+                "punti_natura_valore": 0.5
+            },
+            "identifiers": [
+                {
+                    "id": "conti.nimaia+sn@gmail.com",
+                    "type": "email",
+                    "channels": {
+                        "email": {
+                            "status": "unsubscribed",
+                            "statusDate": "2021-11-29T09:02:17.122Z"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "email": "massimo@nimaia.it",
+            "contactID": "6214cb3976137600211b00e8",
+            "createdAt": "2022-02-22T11:38:33Z",
+            "firstName": "M",
+            "lastName": "Con",
+            "country": "",
+            "countryCode": "",
+            "state": "",
+            "city": "",
+            "postalCode": "",
+            "address": "",
+            "gender": "",
+            "phone": null,
+            "phoneNumber": "",
+            "birthdate": "",
+            "sent": 0,
+            "opened": 0,
+            "clicked": 0,
+            "status": "unsubscribed",
+            "tags": [
+                "changed-email"
+            ],
+            "segments": null,
+            "statuses": [
+                {
+                    "status": "subscribed",
+                    "date": "2022-02-22T11:38:33Z"
+                },
+                {
+                    "status": "unsubscribed",
+                    "date": "2022-02-22T11:41:18Z"
+                }
+            ],
+            "optIns": [
+                {
+                    "date": "2022-02-22T11:38:33Z"
+                }
+            ],
+            "doubleOptIns": null,
+            "customProperties": {
+                "inattivo": "0",
+                "punti_natura": "50",
+                "punti_natura_valore": 0.5
+            },
+            "identifiers": [
+                {
+                    "id": "massimo@nimaia.it",
+                    "type": "email",
+                    "channels": {
+                        "email": {
+                            "status": "unsubscribed",
+                            "statusDate": "2022-02-22T11:41:18.747Z"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "paging": {
+        "previous": null,
+        "next": null,
+        "offset": 0,
+        "limit": 100
+    }
+}

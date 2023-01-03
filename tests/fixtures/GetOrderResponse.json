@@ -18,10 +18,10 @@
     "subTotalTaxIncluded": true,
     "discountSum": 500,
     "taxSum": 0,
-    "createdAt": "2023-01-02T08:34:34Z",
-    "updatedAt": "2023-01-02T14:09:01.263Z",
+    "createdAt": "2023-01-03T09:08:26Z",
+    "updatedAt": "2023-01-03T09:08:26Z",
     "paymentMethod": "Credit Card",
-    "paymentStatus": "paid",
+    "paymentStatus": "awaitingPayment",
     "billingAddress": {
         "firstName": "",
         "lastName": "",
@@ -59,7 +59,7 @@
     "discountValue": 500,
     "shippingSum": 400,
     "shippingMethod": "Express",
-    "fulfillmentStatus": "unfulfilled",
+    "fulfillmentStatus": "inProgress",
     "products": [
         {
             "productID": "12345",
