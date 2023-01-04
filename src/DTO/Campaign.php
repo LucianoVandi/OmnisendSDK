@@ -30,6 +30,23 @@ class Campaign implements \JsonSerializable
         self::TYPE_AB_TEST
     ];
 
+    public const SORT_SENT = 'sent';
+    public const SORT_CLICKED = 'clicked';
+    public const SORT_BOUNCED = 'bounced';
+    public const SORT_COMPLAINED = 'complained';
+    public const SORT_OPENED = 'opened';
+    public const SORT_UNSUBSCRIBED = 'unsubscribed';
+
+    // todo: rename to SORT_OPTIONS
+    public const SORT_TYPES = [
+        self::SORT_SENT,
+        self::SORT_CLICKED,
+        self::SORT_BOUNCED,
+        self::SORT_COMPLAINED,
+        self::SORT_OPENED,
+        self::SORT_UNSUBSCRIBED
+    ];
+
     private string $campaignID;
 
     private ?string $name;

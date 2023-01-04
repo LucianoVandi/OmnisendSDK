@@ -8,9 +8,9 @@ class Segment implements \JsonSerializable
 
     private ?string $segmentID;
 
-    public function __construct(\stdClass $segment)
+    public function __construct(string $segmentID)
     {
-        $this->segmentID = $segment->segmentID;
+        $this->segmentID = $segmentID;
     }
 
     /**

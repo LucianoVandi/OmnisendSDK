@@ -1,0 +1,34 @@
+{
+    "campaign": [
+        {
+            "campaignID": "63b58492e18bb300184ffd8f",
+            "name": "My first email campaign",
+            "status": "draft",
+            "type": "standart",
+            "fromName": "Fabulous Store",
+            "subject": "My first email campaign",
+            "url": "",
+            "createdAt": "2023-01-04T13:52:18.257Z",
+            "updatedAt": "2023-01-04T13:54:45.398Z",
+            "startDate": null,
+            "endDate": null,
+            "sent": 0,
+            "clicked": 0,
+            "bounced": 0,
+            "complained": 0,
+            "opened": 0,
+            "unsubscribed": 0,
+            "allContacts": false,
+            "segments": [
+                "63b58510c24973deb4ea3fac"
+            ],
+            "excludedSegments": null
+        }
+    ],
+    "paging": {
+        "previous": null,
+        "next": null,
+        "offset": 0,
+        "limit": 100
+    }
+}

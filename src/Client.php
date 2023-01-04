@@ -2,6 +2,7 @@
 
 namespace Lvandi\OmnisendSDK;
 
+use Lvandi\OmnisendSDK\Resources\Campaigns;
 use Lvandi\OmnisendSDK\Resources\Carts;
 use Lvandi\OmnisendSDK\Resources\Events;
 use Lvandi\OmnisendSDK\Resources\Orders;
@@ -62,6 +63,11 @@ class Client
     public function getOrdersApi(): Orders
     {
         return new Orders($this->httpClient);
+    }
+
+    public function getCampaignsApi(): Campaigns
+    {
+        return new Campaigns($this->httpClient);
     }
 
     public function getError(): array

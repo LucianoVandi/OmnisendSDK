@@ -12,7 +12,7 @@ class CampaignListResponse extends BaseResponse
     /** @var array<Campaign> */
     private array $campaigns = [];
 
-    private Paging $paging;
+    private ?Paging $paging;
 
     public function __construct(ResponseInterface $response)
     {
@@ -21,13 +21,15 @@ class CampaignListResponse extends BaseResponse
         /** @var \stdClass $body */
         $body = json_decode($response->getBody());
 
-        if (! empty($body->carts)) {
-            foreach ($body->campaigns as $campaign) {
+        if (! empty($body->campaign)) {
+            foreach ($body->campaign as $campaign) {
                 $this->campaigns[] = Campaign::fromRawData($campaign);
             }
         }
 
-        $this->paging = new Paging($body->paging);
+        $this->paging = !is_null($body->paging)
+            ? new Paging($body->paging)
+            : null;
     }
 
     /**
@@ -39,9 +41,9 @@ class CampaignListResponse extends BaseResponse
     }
 
     /**
-     * @return Paging
+     * @return Paging|null
      */
-    public function getPaging(): Paging
+    public function getPaging(): ?Paging
     {
         return $this->paging;
     }
