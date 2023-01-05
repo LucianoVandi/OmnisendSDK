@@ -17,6 +17,14 @@ class Campaigns extends BaseResource
         'type',
     ];
 
+    protected array $listContactsFilters = [
+        'clicked',
+        'opened',
+        'unsubscribed',
+        'bounced',
+        'complained',
+    ];
+
     /**
      * Get campaign details
      *
@@ -55,7 +63,7 @@ class Campaigns extends BaseResource
         ];
 
         if (! empty($filters)) {
-            $queryParams = array_merge($queryParams, $this->applyListFilters($filters));
+            $queryParams = array_merge($queryParams, $this->applyFilters($filters));
         }
 
         $response = $this->httpClient->sendRequest($this->endpoint, 'GET', [
@@ -82,12 +90,16 @@ class Campaigns extends BaseResource
     }
 
     /**
-     * todo: manage filters
+     * List campaign contacts
+     * Result can be filtered by: opened email, clicked on links,
+     * unsubscribed, complained or bounced
+     * 
      * @param string $campaignID
      * @param array|null $filters
      * @param int|null $limit
      * @param int|null $offset
      * @return CampaignContactListResponse
+     * @throws \Exception
      */
     public function listContacts(
         string $campaignID,
@@ -103,7 +115,7 @@ class Campaigns extends BaseResource
         ];
 
         if (! empty($filters)) {
-            $queryParams = array_merge($queryParams, $this->applyListFilters($filters));
+            $queryParams = array_merge($queryParams, $this->applyFilters($filters));
         }
 
         $response = $this->httpClient->sendRequest($uri, 'GET', [
