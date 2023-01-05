@@ -14,22 +14,24 @@ abstract class BaseResource
     }
 
     /**
-     * Return an array of valid filters to include as query params for list operations
+     * Return an array of valid filters to include as query params
      *
      * @param array $filters
      * @return array
      * @throws \Exception
      */
-    protected function applyListFilters(array $filters): array
+    protected function applyFilters(array $filters): array
     {
-        $validFilters = [];
+        $callee = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2)[1]['function'];
+        $calleeFiltersVarName = $callee.'Filters';
 
-        if (! isset($this->listFilters)) {
-            throw new \Exception('This resource does not implement list filters');
+        if (! isset($this->$calleeFiltersVarName)) {
+            throw new \Exception('This method does not implement filters');
         }
 
+        $validFilters = [];
         foreach ($filters as $filterKey => $filterValue) {
-            if (! in_array($filterKey, $this->listFilters)) {
+            if (! in_array($filterKey, $this->$calleeFiltersVarName)) {
                 continue;
             }
 

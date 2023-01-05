@@ -21,7 +21,7 @@ if ($error = $client->getError()) {
 
 print_r($response->getEvent());
 
-if(function_exists('generateFixtureFromResponse')){
+if (function_exists('generateFixtureFromResponse')) {
     generateFixtureFromResponse(__FILE__, $response);
 }
 

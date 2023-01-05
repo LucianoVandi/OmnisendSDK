@@ -4,7 +4,6 @@
 require_once 'vendor/autoload.php';
 
 use Lvandi\OmnisendSDK\Client;
-use Lvandi\OmnisendSDK\DTO\Category;
 use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
 
 $client = new Client(
@@ -13,19 +12,17 @@ $client = new Client(
     )
 );
 
-$category = new Category();
-$category->setCategoryID('test_cat_1')
-    ->setTitle('Test Category 1')
-    ->setCreatedAt((new DateTimeImmutable())->format(DATE_ATOM));
-
-$response = $client->getCategoriesApi()->create($category);
+$response = $client->getCampaignsApi()->getContact(
+    '63b58492e18bb300184ffd8f',
+    '63b353bfd5550d001ca1c6f1'
+);
 
 if ($error = $client->getError()) {
     print_r($error);
     exit(2);
 }
 
-var_dump($response->getCategory());
+var_dump($response);
 
 if (function_exists('generateFixtureFromResponse')) {
     generateFixtureFromResponse(__FILE__, $response);

@@ -101,7 +101,7 @@ class Products extends BaseResource
         ];
 
         if (! empty($filters)) {
-            $queryParams = array_merge($queryParams, $this->applyListFilters($filters));
+            $queryParams = array_merge($queryParams, $this->applyFilters($filters));
         }
 
         $response = $this->httpClient->sendRequest($this->endpoint, 'GET', [
