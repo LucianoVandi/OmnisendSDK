@@ -33,7 +33,7 @@ if ($error = $client->getError()) {
 var_dump($response->getCartProductID());
 
 if (function_exists('generateFixtureFromResponse')) {
-    generateFixtureFromResponse(__FILE__, $response);
+    generateFixtureFromResponse(__FILE__, $response->getHttpResponse());
 }
 
 exit(1);
