@@ -51,7 +51,6 @@ class AbTest implements \JsonSerializable
         return $this->winner;
     }
 
-
     /**
      * @return string|null
      */
@@ -131,7 +130,4 @@ class AbTest implements \JsonSerializable
     {
         return $this->unsubscribed;
     }
-
-
-
 }

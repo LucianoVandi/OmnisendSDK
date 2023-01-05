@@ -3,7 +3,6 @@
 namespace Lvandi\OmnisendSDK\Responses;
 
 use Lvandi\OmnisendSDK\DTO\Campaign;
-use Lvandi\OmnisendSDK\DTO\Cart;
 use Psr\Http\Message\ResponseInterface;
 
 class CampaignResponse extends BaseResponse

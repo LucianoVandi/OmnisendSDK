@@ -2,12 +2,12 @@
 
 namespace Lvandi\OmnisendSDK;
 
-use Lvandi\OmnisendSDK\Resources\Campaigns;
 use Lvandi\OmnisendSDK\Resources\Carts;
 use Lvandi\OmnisendSDK\Resources\Events;
 use Lvandi\OmnisendSDK\Resources\Orders;
 use Lvandi\OmnisendSDK\Resources\Contacts;
 use Lvandi\OmnisendSDK\Resources\Products;
+use Lvandi\OmnisendSDK\Resources\Campaigns;
 use Lvandi\OmnisendSDK\Contracts\HttpClient;
 use Lvandi\OmnisendSDK\Resources\Categories;
 use Lvandi\OmnisendSDK\Contracts\HttpClientFactory;

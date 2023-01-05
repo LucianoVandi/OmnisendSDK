@@ -18,5 +18,4 @@ class CampaignStat implements \JsonSerializable
         $this->mobile = $campaignStat->mobile;
         $this->tablet = $campaignStat->tablet;
     }
-
 }

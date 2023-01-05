@@ -23,7 +23,7 @@ foreach ($response->getEvents() as $event) {
     print_r($event);
 }
 
-if(function_exists('generateFixtureFromResponse')){
+if (function_exists('generateFixtureFromResponse')) {
     generateFixtureFromResponse(__FILE__, $response);
 }
 

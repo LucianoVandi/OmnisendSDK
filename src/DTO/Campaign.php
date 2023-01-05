@@ -19,7 +19,7 @@ class Campaign implements \JsonSerializable
         self::STATUS_PAUSED,
         self::STATUS_SCHEDULED,
         self::STATUS_IN_PROGRESS,
-        self::STATUS_SENT
+        self::STATUS_SENT,
     ];
 
     public const TYPE_STANDARD = 'standard';
@@ -27,7 +27,7 @@ class Campaign implements \JsonSerializable
 
     public const TYPES = [
         self::TYPE_STANDARD,
-        self::TYPE_AB_TEST
+        self::TYPE_AB_TEST,
     ];
 
     public const SORT_SENT = 'sent';
@@ -44,7 +44,7 @@ class Campaign implements \JsonSerializable
         self::SORT_BOUNCED,
         self::SORT_COMPLAINED,
         self::SORT_OPENED,
-        self::SORT_UNSUBSCRIBED
+        self::SORT_UNSUBSCRIBED,
     ];
 
     private string $campaignID;
@@ -83,12 +83,12 @@ class Campaign implements \JsonSerializable
 
     private ?bool $allSubscribers;
 
-    /** @var array<Segment>|null  */
+    /** @var array<Segment>|null */
     private ?array $segments;
 
     private ?AbTest $abTestWinner;
 
-    /** @var array<AbTest>|null  */
+    /** @var array<AbTest>|null */
     private ?array $abTest;
 
     private ?StatByDevice $byDevices;
@@ -128,29 +128,29 @@ class Campaign implements \JsonSerializable
             ->setUnsubscribed($data->unsubscribed)
             ->setAllSubscribers($data->allSubscribers);
 
-        if(!empty($data->segments)){
+        if (! empty($data->segments)) {
             $segments = [];
-            foreach($data->segments as $segment){
+            foreach ($data->segments as $segment) {
                 $segments[] = new Segment($segment);
             }
 
             $campaign->setSegments($segments);
         }
 
-        if(!empty($data->abTest)){
+        if (! empty($data->abTest)) {
             $abTests = [];
-            foreach($data->abTest as $abTest){
+            foreach ($data->abTest as $abTest) {
                 $abTests[] = new Segment($abTest);
             }
 
             $campaign->setAbTest($abTests);
         }
 
-        if(isset($data->abTestWinner)){
+        if (isset($data->abTestWinner)) {
             $campaign->setAbTestWinner(new AbTest($data->abTestWinner));
         }
 
-        if(isset($data->byDevices)){
+        if (isset($data->byDevices)) {
             $campaign->setByDevices(new StatByDevice($data->byDevices));
         }
 
@@ -172,6 +172,7 @@ class Campaign implements \JsonSerializable
     public function setCampaignID(string $campaignID): Campaign
     {
         $this->campaignID = $campaignID;
+
         return $this;
     }
 
@@ -190,6 +191,7 @@ class Campaign implements \JsonSerializable
     public function setName(?string $name): Campaign
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -208,6 +210,7 @@ class Campaign implements \JsonSerializable
     public function setStatus(?string $status): Campaign
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -226,6 +229,7 @@ class Campaign implements \JsonSerializable
     public function setType(?string $type): Campaign
     {
         $this->type = $type;
+
         return $this;
     }
 
@@ -244,6 +248,7 @@ class Campaign implements \JsonSerializable
     public function setFromName(?string $fromName): Campaign
     {
         $this->fromName = $fromName;
+
         return $this;
     }
 
@@ -262,6 +267,7 @@ class Campaign implements \JsonSerializable
     public function setSubject(?string $subject): Campaign
     {
         $this->subject = $subject;
+
         return $this;
     }
 
@@ -280,6 +286,7 @@ class Campaign implements \JsonSerializable
     public function setUrl(?string $url): Campaign
     {
         $this->url = $url;
+
         return $this;
     }
 
@@ -298,6 +305,7 @@ class Campaign implements \JsonSerializable
     public function setCreatedAt(?string $createdAt): Campaign
     {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -316,6 +324,7 @@ class Campaign implements \JsonSerializable
     public function setUpdatedAt(?string $updatedAt): Campaign
     {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -334,6 +343,7 @@ class Campaign implements \JsonSerializable
     public function setStartDate(?string $startDate): Campaign
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 
@@ -352,6 +362,7 @@ class Campaign implements \JsonSerializable
     public function setEndDate(?string $endDate): Campaign
     {
         $this->endDate = $endDate;
+
         return $this;
     }
 
@@ -370,6 +381,7 @@ class Campaign implements \JsonSerializable
     public function setSent(?int $sent): Campaign
     {
         $this->sent = $sent;
+
         return $this;
     }
 
@@ -388,6 +400,7 @@ class Campaign implements \JsonSerializable
     public function setClicked(?int $clicked): Campaign
     {
         $this->clicked = $clicked;
+
         return $this;
     }
 
@@ -406,6 +419,7 @@ class Campaign implements \JsonSerializable
     public function setBounced(?int $bounced): Campaign
     {
         $this->bounced = $bounced;
+
         return $this;
     }
 
@@ -424,6 +438,7 @@ class Campaign implements \JsonSerializable
     public function setComplained(?int $complained): Campaign
     {
         $this->complained = $complained;
+
         return $this;
     }
 
@@ -442,6 +457,7 @@ class Campaign implements \JsonSerializable
     public function setOpened(?int $opened): Campaign
     {
         $this->opened = $opened;
+
         return $this;
     }
 
@@ -460,6 +476,7 @@ class Campaign implements \JsonSerializable
     public function setUnsubscribed(?int $unsubscribed): Campaign
     {
         $this->unsubscribed = $unsubscribed;
+
         return $this;
     }
 
@@ -478,6 +495,7 @@ class Campaign implements \JsonSerializable
     public function setAllSubscribers(?bool $allSubscribers): Campaign
     {
         $this->allSubscribers = $allSubscribers;
+
         return $this;
     }
 
@@ -496,6 +514,7 @@ class Campaign implements \JsonSerializable
     public function setSegments(?array $segments): Campaign
     {
         $this->segments = $segments;
+
         return $this;
     }
 
@@ -514,6 +533,7 @@ class Campaign implements \JsonSerializable
     public function setAbTestWinner(?AbTest $abTestWinner): Campaign
     {
         $this->abTestWinner = $abTestWinner;
+
         return $this;
     }
 
@@ -532,6 +552,7 @@ class Campaign implements \JsonSerializable
     public function setAbTest(?array $abTest): Campaign
     {
         $this->abTest = $abTest;
+
         return $this;
     }
 
@@ -550,7 +571,7 @@ class Campaign implements \JsonSerializable
     public function setByDevices(?StatByDevice $byDevices): Campaign
     {
         $this->byDevices = $byDevices;
+
         return $this;
     }
-
 }

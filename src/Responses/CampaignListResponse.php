@@ -2,9 +2,8 @@
 
 namespace Lvandi\OmnisendSDK\Responses;
 
-use Lvandi\OmnisendSDK\DTO\Campaign;
-use Lvandi\OmnisendSDK\DTO\Cart;
 use Lvandi\OmnisendSDK\DTO\Paging;
+use Lvandi\OmnisendSDK\DTO\Campaign;
 use Psr\Http\Message\ResponseInterface;
 
 class CampaignListResponse extends BaseResponse
@@ -27,7 +26,7 @@ class CampaignListResponse extends BaseResponse
             }
         }
 
-        $this->paging = !is_null($body->paging)
+        $this->paging = ! is_null($body->paging)
             ? new Paging($body->paging)
             : null;
     }

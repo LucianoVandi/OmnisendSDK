@@ -3,14 +3,10 @@
 namespace Lvandi\OmnisendSDK\Resources;
 
 use Lvandi\OmnisendSDK\DTO\Campaign;
-use Lvandi\OmnisendSDK\DTO\Cart;
-use Lvandi\OmnisendSDK\DTO\CartProduct;
-use Lvandi\OmnisendSDK\Responses\CampaignContactResponse;
-use Lvandi\OmnisendSDK\Responses\CampaignListResponse;
 use Lvandi\OmnisendSDK\Responses\CampaignResponse;
-use Lvandi\OmnisendSDK\Responses\CartResponse;
-use Lvandi\OmnisendSDK\Responses\CartListResponse;
-use Lvandi\OmnisendSDK\Responses\CartProductResponse;
+use Lvandi\OmnisendSDK\Responses\CampaignListResponse;
+use Lvandi\OmnisendSDK\Responses\CampaignContactResponse;
+use Lvandi\OmnisendSDK\Responses\CampaignContactListResponse;
 
 class Campaigns extends BaseResource
 {
@@ -18,7 +14,7 @@ class Campaigns extends BaseResource
 
     protected array $listFilters = [
         'status',
-        'type'
+        'type',
     ];
 
     /**
@@ -69,6 +65,13 @@ class Campaigns extends BaseResource
         return new CampaignListResponse($response);
     }
 
+    /**
+     * Get campaign info for specific contact
+     *
+     * @param string $campaignID
+     * @param string $contactID
+     * @return CampaignContactResponse
+     */
     public function getContact(string $campaignID, string $contactID): CampaignContactResponse
     {
         $uri = $this->endpoint . '/' . $campaignID . '/contacts/' . $contactID;
@@ -78,23 +81,65 @@ class Campaigns extends BaseResource
         return new CampaignContactResponse($response);
     }
 
+    /**
+     * todo: manage filters
+     * @param string $campaignID
+     * @param array|null $filters
+     * @param int|null $limit
+     * @param int|null $offset
+     * @return CampaignContactListResponse
+     */
     public function listContacts(
         string $campaignID,
         ?array $filters = null,
         ?int $limit = 100,
         ?int $offset = 0
-    )
-    {
-        $uri = $this->endpoint . '/' . $campaignID . '/contacts/'; // GET
+    ): CampaignContactListResponse {
+        $uri = $this->endpoint . '/' . $campaignID . '/contacts';
+
+        $queryParams = [
+            'limit' => $limit,
+            'offset' => $offset,
+        ];
+
+        if (! empty($filters)) {
+            $queryParams = array_merge($queryParams, $this->applyListFilters($filters));
+        }
+
+        $response = $this->httpClient->sendRequest($uri, 'GET', [
+            'query' => $queryParams,
+        ]);
+
+        return new CampaignContactListResponse($response);
     }
 
+    /**
+     * Delete a campaign
+     *
+     * @param string $campaignID
+     * @return CampaignResponse
+     */
     public function delete(string $campaignID): CampaignResponse
     {
+        $uri = $this->endpoint . '/' . $campaignID;
 
+        $response = $this->httpClient->sendRequest($uri, 'DELETE');
+
+        return new CampaignResponse($response);
     }
 
+    /**
+     * Start sending campaign emails if campaign is in draft/scheduled mode.
+     *
+     * @param string $campaignID
+     * @return CampaignResponse
+     */
     public function startSending(string $campaignID): CampaignResponse
     {
-        $uri = $this->endpoint . '/' . $campaignID . '/action/start';
+        $uri = $this->endpoint . '/' . $campaignID . '/actions/start';
+
+        $response = $this->httpClient->sendRequest($uri, 'POST');
+
+        return new CampaignResponse($response);
     }
 }

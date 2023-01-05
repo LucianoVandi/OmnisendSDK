@@ -31,5 +31,4 @@ class StatByDevice implements \JsonSerializable
     {
         return $this->clicked;
     }
-
 }

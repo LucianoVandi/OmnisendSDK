@@ -20,5 +20,4 @@ class Segment implements \JsonSerializable
     {
         return $this->segmentID;
     }
-
 }
