@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Responses;
 
-use Lvandi\OmnisendSDK\DTO\Campaign;
+use Lvandi\OmnisendSDK\Types\Campaign;
 use Psr\Http\Message\ResponseInterface;
 
 class CampaignResponse extends BaseResponse

@@ -3,7 +3,7 @@
 namespace Lvandi\OmnisendSDK\Responses;
 
 use Psr\Http\Message\ResponseInterface;
-use Lvandi\OmnisendSDK\DTO\CampaignContact;
+use Lvandi\OmnisendSDK\Types\CampaignContact;
 
 class CampaignContactResponse extends BaseResponse
 {

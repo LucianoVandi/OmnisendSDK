@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Resources;
 
-use Lvandi\OmnisendSDK\DTO\Contact;
+use Lvandi\OmnisendSDK\Types\Contact;
 use Lvandi\OmnisendSDK\Responses\GetContactResponse;
 use Lvandi\OmnisendSDK\Responses\CreateContactResponse;
 use Lvandi\OmnisendSDK\Responses\UpdateContactResponse;

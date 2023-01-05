@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Resources;
 
-use Lvandi\OmnisendSDK\DTO\Product;
+use Lvandi\OmnisendSDK\Types\Product;
 use Lvandi\OmnisendSDK\Responses\ProductResponse;
 use Lvandi\OmnisendSDK\Responses\ProductListResponse;
 

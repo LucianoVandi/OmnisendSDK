@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Responses;
 
-use Lvandi\OmnisendSDK\DTO\Event;
+use Lvandi\OmnisendSDK\Types\Event;
 use Psr\Http\Message\ResponseInterface;
 
 class GetEventsListResponse extends BaseResponse

@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Resources;
 
-use Lvandi\OmnisendSDK\DTO\Order;
+use Lvandi\OmnisendSDK\Types\Order;
 use Lvandi\OmnisendSDK\Responses\OrderResponse;
 use Lvandi\OmnisendSDK\Responses\OrderListResponse;
 

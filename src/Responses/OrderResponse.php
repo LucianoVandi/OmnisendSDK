@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Responses;
 
-use Lvandi\OmnisendSDK\DTO\Order;
+use Lvandi\OmnisendSDK\Types\Order;
 use Psr\Http\Message\ResponseInterface;
 
 class OrderResponse extends BaseResponse

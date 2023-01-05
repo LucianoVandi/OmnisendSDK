@@ -2,9 +2,9 @@
 
 namespace Lvandi\OmnisendSDK\Responses;
 
-use Lvandi\OmnisendSDK\DTO\Paging;
+use Lvandi\OmnisendSDK\Types\Paging;
 use Psr\Http\Message\ResponseInterface;
-use Lvandi\OmnisendSDK\DTO\CampaignContact;
+use Lvandi\OmnisendSDK\Types\CampaignContact;
 
 class CampaignContactListResponse extends BaseResponse
 {

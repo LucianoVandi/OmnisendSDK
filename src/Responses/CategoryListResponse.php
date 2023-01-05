@@ -2,8 +2,8 @@
 
 namespace Lvandi\OmnisendSDK\Responses;
 
-use Lvandi\OmnisendSDK\DTO\Paging;
-use Lvandi\OmnisendSDK\DTO\Category;
+use Lvandi\OmnisendSDK\Types\Paging;
+use Lvandi\OmnisendSDK\Types\Category;
 use Psr\Http\Message\ResponseInterface;
 
 class CategoryListResponse extends BaseResponse

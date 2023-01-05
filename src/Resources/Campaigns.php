@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Resources;
 
-use Lvandi\OmnisendSDK\DTO\Campaign;
+use Lvandi\OmnisendSDK\Types\Campaign;
 use Lvandi\OmnisendSDK\Responses\CampaignResponse;
 use Lvandi\OmnisendSDK\Responses\CampaignListResponse;
 use Lvandi\OmnisendSDK\Responses\CampaignContactResponse;
@@ -93,7 +93,7 @@ class Campaigns extends BaseResource
      * List campaign contacts
      * Result can be filtered by: opened email, clicked on links,
      * unsubscribed, complained or bounced
-     * 
+     *
      * @param string $campaignID
      * @param array|null $filters
      * @param int|null $limit

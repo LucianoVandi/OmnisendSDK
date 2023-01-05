@@ -2,8 +2,8 @@
 
 namespace Lvandi\OmnisendSDK\Resources;
 
-use Lvandi\OmnisendSDK\DTO\Cart;
-use Lvandi\OmnisendSDK\DTO\CartProduct;
+use Lvandi\OmnisendSDK\Types\Cart;
+use Lvandi\OmnisendSDK\Types\CartProduct;
 use Lvandi\OmnisendSDK\Responses\CartResponse;
 use Lvandi\OmnisendSDK\Responses\CartListResponse;
 use Lvandi\OmnisendSDK\Responses\CartProductResponse;

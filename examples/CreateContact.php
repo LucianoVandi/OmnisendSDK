@@ -4,8 +4,8 @@
 require_once 'vendor/autoload.php';
 
 use Lvandi\OmnisendSDK\Client;
-use Lvandi\OmnisendSDK\DTO\Contact;
-use Lvandi\OmnisendSDK\DTO\ChannelObject;
+use Lvandi\OmnisendSDK\Types\Contact;
+use Lvandi\OmnisendSDK\Types\ChannelObject;
 use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
 
 $client = new Client(

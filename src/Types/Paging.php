@@ -1,6 +1,6 @@
 <?php
 
-namespace Lvandi\OmnisendSDK\DTO;
+namespace Lvandi\OmnisendSDK\Types;
 
 class Paging
 {
