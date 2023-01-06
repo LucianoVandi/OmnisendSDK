@@ -2,8 +2,8 @@
 
 namespace Lvandi\OmnisendSDK\Tests;
 
-use Lvandi\OmnisendSDK\ApiClient;
 use PHPUnit\Framework\TestCase;
+use Lvandi\OmnisendSDK\ApiClient;
 use Lvandi\OmnisendSDK\Resources\Events;
 use Lvandi\OmnisendSDK\Resources\Contacts;
 use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;

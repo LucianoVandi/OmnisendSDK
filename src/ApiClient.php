@@ -30,7 +30,7 @@ class ApiClient
             'debug' => $debug,
             'headers' => [
                 'Accept' => 'application/json',
-                'User-Agent' => 'eZeeDeskClient/'.self::VERSION,
+                'User-Agent' => 'OmnisendSDK/'.self::VERSION,
             ],
         ]);
     }
@@ -78,5 +78,22 @@ class ApiClient
     public function getRateLimitRemaining(): int
     {
         return $this->httpClient->getRateLimitRemaining();
+    }
+
+    public function getSnippet(string $accountID, bool $trackPageview = true): string
+    {
+        $snippet = [
+            '<script type="text/javascript">',
+            'window.omnisend = window.omnisend || [];',
+            'omnisend.push(["accountID", "'.$accountID.'"]);',
+            $trackPageview ? 'omnisend.push(["track", "$pageViewed"]);' : '',
+            '!function(){var e=document.createElement("script");',
+            'e.type="text/javascript",e.async=!0,e.src="https://omnisnippet1.com/inshop/launcher-v2.js";',
+            'var t=document.getElementsByTagName("script")[0];',
+            't.parentNode.insertBefore(e,t)}();',
+            '</script>',
+        ];
+
+        return implode('', $snippet);
     }
 }
