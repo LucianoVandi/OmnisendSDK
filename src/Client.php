@@ -35,37 +35,37 @@ class Client
         ]);
     }
 
-    public function getEventsApi(): Events
+    public function events(): Events
     {
         return new Events($this->httpClient);
     }
 
-    public function getContactsApi(): Contacts
+    public function contacts(): Contacts
     {
         return new Contacts($this->httpClient);
     }
 
-    public function getProductsApi(): Products
+    public function products(): Products
     {
         return new Products($this->httpClient);
     }
 
-    public function getCategoriesApi(): Categories
+    public function categories(): Categories
     {
         return new Categories($this->httpClient);
     }
 
-    public function getCartsApi(): Carts
+    public function carts(): Carts
     {
         return new Carts($this->httpClient);
     }
 
-    public function getOrdersApi(): Orders
+    public function orders(): Orders
     {
         return new Orders($this->httpClient);
     }
 
-    public function getCampaignsApi(): Campaigns
+    public function campaigns(): Campaigns
     {
         return new Campaigns($this->httpClient);
     }

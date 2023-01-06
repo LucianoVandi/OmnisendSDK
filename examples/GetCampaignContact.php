@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getCampaignsApi()->getContact(
+$response = $client->campaigns()->getContact(
     '63b58492e18bb300184ffd8f',
     '63b353bfd5550d001ca1c6f1'
 );

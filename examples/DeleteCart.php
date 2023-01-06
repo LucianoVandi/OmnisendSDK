@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getCartsApi()->delete('1234');
+$response = $client->carts()->delete('1234');
 
 if ($error = $client->getError()) {
     print_r($error);

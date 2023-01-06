@@ -29,7 +29,7 @@ $contact = Contact::fromRawData([
     'tags' => null,
 ]);
 
-$response = $client->getContactsApi()->create($contact);
+$response = $client->contacts()->create($contact);
 
 if ($error = $client->getError()) {
     print_r($error);

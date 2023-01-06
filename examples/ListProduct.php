@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getProductsApi()->list([
+$response = $client->products()->list([
     'vendor' => 'Probios',
 ], 10);
 

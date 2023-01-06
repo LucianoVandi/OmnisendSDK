@@ -18,7 +18,7 @@ $category->setCategoryID('test_cat_1')
     ->setTitle('Test Category 1')
     ->setCreatedAt((new DateTimeImmutable())->format(DATE_ATOM));
 
-$response = $client->getCategoriesApi()->create($category);
+$response = $client->categories()->create($category);
 
 if ($error = $client->getError()) {
     print_r($error);

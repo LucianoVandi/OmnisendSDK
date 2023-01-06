@@ -60,7 +60,7 @@ $order = Order::fromRawData([
     ],
 ]);
 
-$response = $client->getOrdersApi()->replace('1234', $order);
+$response = $client->orders()->replace('1234', $order);
 
 if ($error = $client->getError()) {
     print_r($error);

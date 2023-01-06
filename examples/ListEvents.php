@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getEventsApi()->list();
+$response = $client->events()->list();
 
 if ($error = $client->getError()) {
     print_r($error);

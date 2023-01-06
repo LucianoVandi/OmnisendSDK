@@ -18,7 +18,7 @@ $order = Order::fromRawData([
     'fulfillmentStatus' => Order::ORDER_FULFILLED,
 ]);
 
-$response = $client->getOrdersApi()->updateStatus('1234', $order);
+$response = $client->orders()->updateStatus('1234', $order);
 
 if ($error = $client->getError()) {
     print_r($error);

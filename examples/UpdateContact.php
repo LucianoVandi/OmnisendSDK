@@ -18,7 +18,7 @@ $contact = Contact::fromRawData([
     'tags' => ['updated'],
 ]);
 
-$response = $client->getContactsApi()->update($contact, null, '63a0de5889048e001d91624b');
+$response = $client->contacts()->update($contact, null, '63a0de5889048e001d91624b');
 
 if ($error = $client->getError()) {
     print_r($error);

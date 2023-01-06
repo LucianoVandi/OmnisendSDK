@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getCartsApi()->list(null, 1, 0, 'createdAt');
+$response = $client->carts()->list(null, 1, 0, 'createdAt');
 
 if ($error = $client->getError()) {
     print_r($error);

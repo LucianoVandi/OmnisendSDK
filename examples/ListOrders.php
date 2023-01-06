@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getOrdersApi()->list([
+$response = $client->orders()->list([
     'email' => 'vandi.luciano@gmail.com',
 ]);
 

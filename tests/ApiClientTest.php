@@ -25,13 +25,13 @@ class ApiClientTest extends TestCase
 
     public function testCanGetInstanceOfEventsApi()
     {
-        $eventsApi = $this->apiClient->getEventsApi();
+        $eventsApi = $this->apiClient->events();
         $this->assertInstanceOf(Events::class, $eventsApi);
     }
 
     public function testCanGetInstanceOfContactsApi()
     {
-        $contactsApi = $this->apiClient->getContactsApi();
+        $contactsApi = $this->apiClient->contacts();
         $this->assertInstanceOf(Contacts::class, $contactsApi);
     }
 }

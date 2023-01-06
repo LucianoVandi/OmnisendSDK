@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getEventsApi()->get('639f232ae32347001e1d36c2');
+$response = $client->events()->get('639f232ae32347001e1d36c2');
 
 if ($error = $client->getError()) {
     print_r($error);

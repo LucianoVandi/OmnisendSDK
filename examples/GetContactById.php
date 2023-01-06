@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getContactsApi()->get('63a0de5889048e001d91624b');
+$response = $client->contacts()->get('63a0de5889048e001d91624b');
 
 if ($error = $client->getError()) {
     print_r($error);

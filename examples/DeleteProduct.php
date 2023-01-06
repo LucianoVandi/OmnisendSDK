@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getProductsApi()->delete('123');
+$response = $client->products()->delete('123');
 
 if ($error = $client->getError()) {
     print_r($error);

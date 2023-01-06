@@ -30,7 +30,7 @@ $product = Product::fromRawData([
     ],
 ]);
 
-$response = $client->getProductsApi()->create($product);
+$response = $client->products()->create($product);
 
 if ($error = $client->getError()) {
     print_r($error);

@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getCampaignsApi()->startSending('63b681fbe18bb30018500162');
+$response = $client->campaigns()->startSending('63b681fbe18bb30018500162');
 
 if ($error = $client->getError()) {
     print_r($error);

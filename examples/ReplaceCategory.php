@@ -16,7 +16,7 @@ $client = new Client(
 $category = new Category();
 $category->setTitle('Test Category 1 - Replaced');
 
-$response = $client->getCategoriesApi()->replace('test_cat_1', $category);
+$response = $client->categories()->replace('test_cat_1', $category);
 
 if ($error = $client->getError()) {
     print_r($error);

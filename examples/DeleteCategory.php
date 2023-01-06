@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getCategoriesApi()->delete('test_cat_1');
+$response = $client->categories()->delete('test_cat_1');
 
 if ($error = $client->getError()) {
     print_r($error);

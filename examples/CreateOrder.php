@@ -60,7 +60,7 @@ $order = Order::fromRawData([
     ],
 ]);
 
-$response = $client->getOrdersApi()->create($order);
+$response = $client->orders()->create($order);
 
 if ($error = $client->getError()) {
     print_r($error);

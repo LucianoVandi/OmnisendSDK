@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getCampaignsApi()->list();
+$response = $client->campaigns()->list();
 
 if ($error = $client->getError()) {
     print_r($error);

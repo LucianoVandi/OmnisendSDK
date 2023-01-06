@@ -23,7 +23,7 @@ $cartProduct = CartProduct::fromRawData([
     'currency' => 'EUR',
 ]);
 
-$response = $client->getCartsApi()->addProduct('1234', $cartProduct);
+$response = $client->carts()->addProduct('1234', $cartProduct);
 
 if ($error = $client->getError()) {
     print_r($error);

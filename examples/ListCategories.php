@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getCategoriesApi()->list();
+$response = $client->categories()->list();
 
 if ($error = $client->getError()) {
     print_r($error);

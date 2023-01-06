@@ -31,7 +31,7 @@ $cart = Cart::fromRawData([
     ],
 ]);
 
-$response = $client->getCartsApi()->create($cart);
+$response = $client->carts()->create($cart);
 
 if ($error = $client->getError()) {
     print_r($error);

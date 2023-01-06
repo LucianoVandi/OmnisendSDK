@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getCartsApi()->get('1234');
+$response = $client->carts()->get('1234');
 
 if ($error = $client->getError()) {
     print_r($error);

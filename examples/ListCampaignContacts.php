@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getCampaignsApi()->listContacts('63b58492e18bb300184ffd8f', [
+$response = $client->campaigns()->listContacts('63b58492e18bb300184ffd8f', [
 //    'opened' => true
 ]);
 

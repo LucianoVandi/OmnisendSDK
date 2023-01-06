@@ -12,7 +12,7 @@ $client = new Client(
     )
 );
 
-$response = $client->getContactsApi()->list([
+$response = $client->contacts()->list([
     'status' => \Lvandi\OmnisendSDK\Types\ChannelObject::STATUS_UNSUBSCRIBED,
 //    'email' => 'vandi.luciano@gmail.com'
 ]);
