@@ -3,10 +3,10 @@
 
 require_once 'vendor/autoload.php';
 
-use Lvandi\OmnisendSDK\Client;
+use Lvandi\OmnisendSDK\ApiClient;
 use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
 
-$client = new Client(
+$client = new ApiClient(
     new GuzzleClientFactory(
         (string) getenv('API_KEY')
     )

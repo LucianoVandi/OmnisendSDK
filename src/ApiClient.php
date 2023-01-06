@@ -12,7 +12,7 @@ use Lvandi\OmnisendSDK\Contracts\HttpClient;
 use Lvandi\OmnisendSDK\Resources\Categories;
 use Lvandi\OmnisendSDK\Contracts\HttpClientFactory;
 
-class Client
+class ApiClient
 {
     public const VERSION = '1.0';
 
