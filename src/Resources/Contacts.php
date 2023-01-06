@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Resources;
 
-use Lvandi\OmnisendSDK\DTO\Contact;
+use Lvandi\OmnisendSDK\Types\Contact;
 use Lvandi\OmnisendSDK\Responses\GetContactResponse;
 use Lvandi\OmnisendSDK\Responses\CreateContactResponse;
 use Lvandi\OmnisendSDK\Responses\UpdateContactResponse;
@@ -51,7 +51,7 @@ class Contacts extends BaseResource
         ];
 
         if (! empty($filters)) {
-            $queryParams = array_merge($queryParams, $this->getFilters($filters));
+            $queryParams = array_merge($queryParams, $this->applyFilters($filters));
         }
 
         $response = $this->httpClient->sendRequest($this->endpoint, 'GET', [

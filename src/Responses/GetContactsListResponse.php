@@ -2,8 +2,8 @@
 
 namespace Lvandi\OmnisendSDK\Responses;
 
-use Lvandi\OmnisendSDK\DTO\Paging;
-use Lvandi\OmnisendSDK\DTO\Contact;
+use Lvandi\OmnisendSDK\Types\Paging;
+use Lvandi\OmnisendSDK\Types\Contact;
 use Psr\Http\Message\ResponseInterface;
 
 class GetContactsListResponse extends BaseResponse

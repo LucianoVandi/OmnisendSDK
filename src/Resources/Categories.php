@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Resources;
 
-use Lvandi\OmnisendSDK\DTO\Category;
+use Lvandi\OmnisendSDK\Types\Category;
 use Lvandi\OmnisendSDK\Responses\CategoryResponse;
 use Lvandi\OmnisendSDK\Responses\CategoryListResponse;
 

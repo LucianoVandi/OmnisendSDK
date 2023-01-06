@@ -1,0 +1,44 @@
+{
+    "email": "vandi.luciano@gmail.com",
+    "contactID": "63a0de5889048e001d91624b",
+    "createdAt": "2022-12-19T21:57:44Z",
+    "firstName": "Luciano",
+    "lastName": "",
+    "country": "",
+    "countryCode": "",
+    "state": "",
+    "city": "",
+    "postalCode": "",
+    "address": "",
+    "gender": "",
+    "phone": null,
+    "phoneNumber": "",
+    "birthdate": "",
+    "sent": 0,
+    "opened": 0,
+    "clicked": 0,
+    "status": "nonSubscribed",
+    "tags": [
+        "ezeedesk",
+        "updated"
+    ],
+    "segments": [
+        "62446f6256cf857313d3bc39"
+    ],
+    "statuses": null,
+    "optIns": null,
+    "doubleOptIns": null,
+    "customProperties": null,
+    "identifiers": [
+        {
+            "id": "vandi.luciano@gmail.com",
+            "type": "email",
+            "channels": {
+                "email": {
+                    "status": "nonSubscribed",
+                    "statusDate": "2023-01-03T09:08:27.289Z"
+                }
+            }
+        }
+    ]
+}

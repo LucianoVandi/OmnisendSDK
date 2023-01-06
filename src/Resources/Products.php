@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Resources;
 
-use Lvandi\OmnisendSDK\DTO\Product;
+use Lvandi\OmnisendSDK\Types\Product;
 use Lvandi\OmnisendSDK\Responses\ProductResponse;
 use Lvandi\OmnisendSDK\Responses\ProductListResponse;
 
@@ -101,7 +101,7 @@ class Products extends BaseResource
         ];
 
         if (! empty($filters)) {
-            $queryParams = array_merge($queryParams, $this->getFilters($filters));
+            $queryParams = array_merge($queryParams, $this->applyFilters($filters));
         }
 
         $response = $this->httpClient->sendRequest($this->endpoint, 'GET', [

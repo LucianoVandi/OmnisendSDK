@@ -3,16 +3,16 @@
 
 require_once 'vendor/autoload.php';
 
-use Lvandi\OmnisendSDK\Client;
+use Lvandi\OmnisendSDK\ApiClient;
 use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
 
-$client = new Client(
+$client = new ApiClient(
     new GuzzleClientFactory(
         (string) getenv('API_KEY')
     )
 );
 
-$response = $client->getCartsApi()->delete('1234');
+$response = $client->carts()->delete('1234');
 
 if ($error = $client->getError()) {
     print_r($error);

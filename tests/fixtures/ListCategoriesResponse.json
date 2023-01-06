@@ -1,0 +1,22 @@
+{
+    "categories": [
+        {
+            "categoryID": "test_cat_1",
+            "title": "Test Category 1",
+            "createdAt": "2023-01-03T09:07:42Z",
+            "updatedAt": "2023-01-03T09:07:42Z"
+        },
+        {
+            "categoryID": "test_cat_2",
+            "title": "Test Category 2",
+            "createdAt": "2023-01-02T21:55:54Z",
+            "updatedAt": "2023-01-02T21:55:54Z"
+        }
+    ],
+    "paging": {
+        "previous": null,
+        "next": null,
+        "offset": 0,
+        "limit": 100
+    }
+}

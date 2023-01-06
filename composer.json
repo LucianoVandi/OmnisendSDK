@@ -33,9 +33,9 @@
         }
     },
     "autoload-dev": {
-        "psr-4": {
-            "Lvandi\\OmnisendSDK\\Tests\\": "tests"
-        }
+        "files": [
+            "helpers.php"
+        ]
     },
     "scripts": {
         "cs-fix": "./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --allow-risky=yes",
@@ -55,5 +55,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "version": "0.0.1"
+    "version": "0.0.2"
 }

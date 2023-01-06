@@ -3,11 +3,11 @@
 
 require_once 'vendor/autoload.php';
 
-use Lvandi\OmnisendSDK\Client;
-use Lvandi\OmnisendSDK\DTO\Cart;
+use Lvandi\OmnisendSDK\ApiClient;
+use Lvandi\OmnisendSDK\Types\Cart;
 use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
 
-$client = new Client(
+$client = new ApiClient(
     new GuzzleClientFactory(
         (string) getenv('API_KEY')
     )
@@ -31,7 +31,7 @@ $cart = Cart::fromRawData([
     ],
 ]);
 
-$response = $client->getCartsApi()->create($cart);
+$response = $client->carts()->create($cart);
 
 if ($error = $client->getError()) {
     print_r($error);
@@ -39,5 +39,9 @@ if ($error = $client->getError()) {
 }
 
 var_dump($response->getCart());
+
+if (function_exists('generateFixtureFromResponse')) {
+    generateFixtureFromResponse(__FILE__, $response->getHttpResponse());
+}
 
 exit(1);

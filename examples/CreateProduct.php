@@ -3,11 +3,11 @@
 
 require_once 'vendor/autoload.php';
 
-use Lvandi\OmnisendSDK\Client;
-use Lvandi\OmnisendSDK\DTO\Product;
+use Lvandi\OmnisendSDK\ApiClient;
+use Lvandi\OmnisendSDK\Types\Product;
 use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
 
-$client = new Client(
+$client = new ApiClient(
     new GuzzleClientFactory(
         (string) getenv('API_KEY')
     )
@@ -30,7 +30,7 @@ $product = Product::fromRawData([
     ],
 ]);
 
-$response = $client->getProductsApi()->create($product);
+$response = $client->products()->create($product);
 
 if ($error = $client->getError()) {
     print_r($error);
@@ -38,5 +38,9 @@ if ($error = $client->getError()) {
 }
 
 print_r($response->getProduct());
+
+if (function_exists('generateFixtureFromResponse')) {
+    generateFixtureFromResponse(__FILE__, $response->getHttpResponse());
+}
 
 exit(1);

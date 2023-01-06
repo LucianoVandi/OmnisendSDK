@@ -3,17 +3,17 @@
 
 require_once 'vendor/autoload.php';
 
-use Lvandi\OmnisendSDK\Client;
+use Lvandi\OmnisendSDK\ApiClient;
 use Lvandi\OmnisendSDK\HttpClients\GuzzleClientFactory;
 
-$client = new Client(
+$client = new ApiClient(
     new GuzzleClientFactory(
         (string) getenv('API_KEY')
     )
 );
 
-$response = $client->getContactsApi()->list([
-    'status' => \Lvandi\OmnisendSDK\DTO\ChannelObject::STATUS_UNSUBSCRIBED,
+$response = $client->contacts()->list([
+    'status' => \Lvandi\OmnisendSDK\Types\ChannelObject::STATUS_UNSUBSCRIBED,
 //    'email' => 'vandi.luciano@gmail.com'
 ]);
 
@@ -23,5 +23,9 @@ if ($error = $client->getError()) {
 }
 
 var_dump($response->getContacts());
+
+if (function_exists('generateFixtureFromResponse')) {
+    generateFixtureFromResponse(__FILE__, $response->getHttpResponse());
+}
 
 exit(1);

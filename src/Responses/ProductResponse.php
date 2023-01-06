@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Responses;
 
-use Lvandi\OmnisendSDK\DTO\Product;
+use Lvandi\OmnisendSDK\Types\Product;
 use Psr\Http\Message\ResponseInterface;
 
 class ProductResponse extends BaseResponse

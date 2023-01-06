@@ -2,8 +2,8 @@
 
 namespace Lvandi\OmnisendSDK\Resources;
 
-use Lvandi\OmnisendSDK\DTO\Cart;
-use Lvandi\OmnisendSDK\DTO\CartProduct;
+use Lvandi\OmnisendSDK\Types\Cart;
+use Lvandi\OmnisendSDK\Types\CartProduct;
 use Lvandi\OmnisendSDK\Responses\CartResponse;
 use Lvandi\OmnisendSDK\Responses\CartListResponse;
 use Lvandi\OmnisendSDK\Responses\CartProductResponse;
@@ -146,7 +146,7 @@ class Carts extends BaseResource
         ];
 
         if (! empty($filters)) {
-            $queryParams = array_merge($queryParams, $this->getFilters($filters));
+            $queryParams = array_merge($queryParams, $this->applyFilters($filters));
         }
 
         $response = $this->httpClient->sendRequest($this->endpoint, 'GET', [

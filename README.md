@@ -4,15 +4,15 @@ A fully typed SDK to integrate your app with [Omnisend](https://www.omnisend.com
 
 **<span style="color:red">WORK IN PROGRESS: do not use it in production!</span>**
 
-## Resources roadmap
+## Resources checklist
 
 - [X] Contacts
 - [X] Carts
 - [X] Products
 - [X] Categories
 - [X] Events
-- [ ] Campaigns
-- [ ] Orders
+- [X] Campaigns
+- [X] Orders
 - [ ] Batches
 
 ## Installation

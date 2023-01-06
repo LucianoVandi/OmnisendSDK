@@ -2,7 +2,7 @@
 
 namespace Lvandi\OmnisendSDK\Responses;
 
-use Lvandi\OmnisendSDK\DTO\Cart;
+use Lvandi\OmnisendSDK\Types\Cart;
 use Psr\Http\Message\ResponseInterface;
 
 class CartResponse extends BaseResponse
