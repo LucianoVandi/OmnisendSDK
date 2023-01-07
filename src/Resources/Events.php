@@ -2,9 +2,8 @@
 
 namespace Lvandi\OmnisendSDK\Resources;
 
-use Lvandi\OmnisendSDK\Responses\GetEventResponse;
-use Lvandi\OmnisendSDK\Responses\TriggerEventResponse;
-use Lvandi\OmnisendSDK\Responses\GetEventsListResponse;
+use Lvandi\OmnisendSDK\Responses\EventResponse;
+use Lvandi\OmnisendSDK\Responses\EventListResponse;
 
 /**
  * Custom events are used to trigger custom automation workflows through API.
@@ -19,27 +18,27 @@ class Events extends BaseResource
      * Get custom event created in Omnisend app.
      *
      * @param string $eventId
-     * @return GetEventResponse
+     * @return EventResponse
      */
-    public function get(string $eventId): GetEventResponse
+    public function get(string $eventId): EventResponse
     {
         $uri = $this->endpoint . '/' . $eventId;
 
         $response = $this->httpClient->sendRequest($uri, 'GET');
 
-        return new GetEventResponse($response);
+        return new EventResponse($response);
     }
 
     /**
      * Get a list of custom events created in Omnisend app.
      *
-     * @return GetEventsListResponse
+     * @return EventListResponse
      */
-    public function list(): GetEventsListResponse
+    public function list(): EventListResponse
     {
         $response = $this->httpClient->sendRequest($this->endpoint, 'GET');
 
-        return new GetEventsListResponse($response);
+        return new EventListResponse($response);
     }
 
     /**
@@ -47,9 +46,9 @@ class Events extends BaseResource
      *
      * @param string $eventId
      * @param array $params
-     * @return TriggerEventResponse
+     * @return EventResponse
      */
-    public function trigger(string $eventId, array $params): TriggerEventResponse
+    public function trigger(string $eventId, array $params): EventResponse
     {
         $uri = $this->endpoint . '/' . $eventId;
 
@@ -60,7 +59,7 @@ class Events extends BaseResource
             ]),
         ]);
 
-        return new TriggerEventResponse($response);
+        return new EventResponse($response);
     }
 
     /**

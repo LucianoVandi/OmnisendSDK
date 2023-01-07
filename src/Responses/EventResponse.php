@@ -5,7 +5,7 @@ namespace Lvandi\OmnisendSDK\Responses;
 use Lvandi\OmnisendSDK\Types\Event;
 use Psr\Http\Message\ResponseInterface;
 
-class GetEventResponse extends BaseResponse
+class EventResponse extends BaseResponse
 {
     private Event $event;
 
