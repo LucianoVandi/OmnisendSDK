@@ -18,7 +18,7 @@ class CampaignListResponse extends BaseResponse
         parent::__construct($response);
 
         /** @var \stdClass $body */
-        $body = json_decode($response->getBody());
+        $body = $this->getDecodedBody();
 
         if (! empty($body->campaign)) {
             foreach ($body->campaign as $campaign) {

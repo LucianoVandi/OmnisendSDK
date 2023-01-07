@@ -13,7 +13,7 @@ class ContactResponse extends BaseResponse
     {
         parent::__construct($response);
 
-        $body = json_decode($response->getBody());
+        $body = $this->getDecodedBody();
 
         $this->contact = Contact::fromRawData($body);
     }

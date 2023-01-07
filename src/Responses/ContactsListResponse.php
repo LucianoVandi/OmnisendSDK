@@ -18,7 +18,7 @@ class ContactsListResponse extends BaseResponse
         parent::__construct($response);
 
         /** @var \stdClass $body */
-        $body = json_decode($response->getBody());
+        $body = $this->getDecodedBody();
 
         if (! empty($body->contacts)) {
             foreach ($body->contacts as $contact) {

@@ -13,11 +13,7 @@ class CampaignResponse extends BaseResponse
     {
         parent::__construct($response);
 
-        // 204 status code means empty response, then we set
-        // the body to an empty array for custom response processing
-        $body = $response->getStatusCode() !== 204
-            ? json_decode($response->getBody())
-            : [];
+        $body = $this->getDecodedBody();
 
         $this->campaign = Campaign::fromRawData($body);
     }

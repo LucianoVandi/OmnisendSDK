@@ -12,7 +12,8 @@ class GetEventResponse extends BaseResponse
     public function __construct(ResponseInterface $response)
     {
         parent::__construct($response);
-        $body = json_decode($response->getBody());
+
+        $body = $this->getDecodedBody();
 
         $this->event = new Event($body);
     }
