@@ -11,13 +11,13 @@ use Lvandi\OmnisendSDK\HttpClients\GuzzleClient;
 
 class GuzzleClientTest extends TestCase
 {
-    public function testCanGetInstanceOfGuzzleClient()
+    public function testCanGetInstanceOfGuzzleClient(): void
     {
         $client = new GuzzleClient('myApiToken', []);
         $this->assertInstanceOf(GuzzleClient::class, $client);
     }
 
-    public function testCanSendRequest()
+    public function testCanSendRequest(): void
     {
         $responseHeaders = [
             'X-Rate-Limit-Remaining' => 100,
@@ -36,7 +36,7 @@ class GuzzleClientTest extends TestCase
         $this->assertInstanceOf(ResponseInterface::class, $request);
     }
 
-    public function testThrowsExceptionOnWrongMethod()
+    public function testThrowsExceptionOnWrongMethod(): void
     {
         $responseHeaders = [
             'X-Rate-Limit-Remaining' => 100,

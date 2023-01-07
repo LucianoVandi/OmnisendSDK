@@ -17,12 +17,12 @@ class GuzzleClientFactoryTest extends TestCase
         $this->httpClientFactory = new GuzzleClientFactory('myApiToken');
     }
 
-    public function testCanGetInstanceOfHttpClientFactory()
+    public function testCanGetInstanceOfHttpClientFactory(): void
     {
         $this->assertInstanceOf(HttpClientFactory::class, $this->httpClientFactory);
     }
 
-    public function testCanGetInstanceOfHttpClient()
+    public function testCanGetInstanceOfHttpClient(): void
     {
         $httpClient = $this->httpClientFactory->createClient([]);
         $this->assertInstanceOf(HttpClient::class, $httpClient);
