@@ -5,7 +5,7 @@ namespace Lvandi\OmnisendSDK\Responses;
 use Lvandi\OmnisendSDK\Types\Contact;
 use Psr\Http\Message\ResponseInterface;
 
-class CreateContactResponse extends BaseResponse
+class ContactResponse extends BaseResponse
 {
     private Contact $contact;
 

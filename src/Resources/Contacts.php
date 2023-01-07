@@ -3,10 +3,8 @@
 namespace Lvandi\OmnisendSDK\Resources;
 
 use Lvandi\OmnisendSDK\Types\Contact;
-use Lvandi\OmnisendSDK\Responses\GetContactResponse;
-use Lvandi\OmnisendSDK\Responses\CreateContactResponse;
-use Lvandi\OmnisendSDK\Responses\UpdateContactResponse;
-use Lvandi\OmnisendSDK\Responses\GetContactsListResponse;
+use Lvandi\OmnisendSDK\Responses\ContactResponse;
+use Lvandi\OmnisendSDK\Responses\ContactsListResponse;
 
 class Contacts extends BaseResource
 {
@@ -24,15 +22,15 @@ class Contacts extends BaseResource
      * Get the contact details
      *
      * @param string $contactId
-     * @return GetContactResponse
+     * @return ContactResponse
      */
-    public function get(string $contactId): GetContactResponse
+    public function get(string $contactId): ContactResponse
     {
         $uri = $this->endpoint . '/' . $contactId;
 
         $response = $this->httpClient->sendRequest($uri, 'GET');
 
-        return new GetContactResponse($response);
+        return new ContactResponse($response);
     }
 
     /**
@@ -41,10 +39,10 @@ class Contacts extends BaseResource
      *
      * @param array|null $filters
      * @param int|null $limit default 100, max 250
-     * @return GetContactsListResponse
+     * @return ContactsListResponse
      * @throws \Exception
      */
-    public function list(?array $filters = null, ?int $limit = 100): GetContactsListResponse
+    public function list(?array $filters = null, ?int $limit = 100): ContactsListResponse
     {
         $queryParams = [
             'limit' => $limit,
@@ -58,22 +56,22 @@ class Contacts extends BaseResource
             'query' => $queryParams,
         ]);
 
-        return new GetContactsListResponse($response);
+        return new ContactsListResponse($response);
     }
 
     /**
      * Create a new contact.
      *
      * @param Contact $contact
-     * @return CreateContactResponse
+     * @return ContactResponse
      */
-    public function create(Contact $contact): CreateContactResponse
+    public function create(Contact $contact): ContactResponse
     {
         $response = $this->httpClient->sendRequest($this->endpoint, 'POST', [
             'body' => json_encode($contact),
         ]);
 
-        return new CreateContactResponse($response);
+        return new ContactResponse($response);
     }
 
     /**
@@ -85,10 +83,10 @@ class Contacts extends BaseResource
      * @param Contact $contact Pass only fields you want to update.
      * @param string|null $email
      * @param string|null $contactId
-     * @return UpdateContactResponse
+     * @return ContactResponse
      * @throws \Exception
      */
-    public function update(Contact $contact, ?string $email, ?string $contactId = null): UpdateContactResponse
+    public function update(Contact $contact, ?string $email, ?string $contactId = null): ContactResponse
     {
         $uri = $this->endpoint;
         $options['body'] = json_encode($contact);
@@ -103,6 +101,6 @@ class Contacts extends BaseResource
 
         $response = $this->httpClient->sendRequest($uri, 'PATCH', $options);
 
-        return new UpdateContactResponse($response);
+        return new ContactResponse($response);
     }
 }

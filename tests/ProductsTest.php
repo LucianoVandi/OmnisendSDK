@@ -73,7 +73,7 @@ class ProductsTest extends TestCase
         $response = new Response(
             $status,
             $headers,
-            !is_null($fixtureFileName) ? $this->getFixture($fixtureFileName) : ''
+            ! is_null($fixtureFileName) ? $this->getFixture($fixtureFileName) : ''
         );
 
         $httpClient = $this->createMock(HttpClient::class);

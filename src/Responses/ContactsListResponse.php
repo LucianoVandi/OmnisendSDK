@@ -6,7 +6,7 @@ use Lvandi\OmnisendSDK\Types\Paging;
 use Lvandi\OmnisendSDK\Types\Contact;
 use Psr\Http\Message\ResponseInterface;
 
-class GetContactsListResponse extends BaseResponse
+class ContactsListResponse extends BaseResponse
 {
     /** @var array<Contact> */
     private array $contacts = [];
