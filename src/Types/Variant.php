@@ -6,6 +6,7 @@ namespace Lvandi\OmnisendSDK\Types;
 
 use stdClass;
 use JsonSerializable;
+use Lvandi\OmnisendSDK\Traits\JsonSerializeTrait;
 
 class Variant implements JsonSerializable
 {

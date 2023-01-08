@@ -7,6 +7,7 @@ namespace Lvandi\OmnisendSDK\Types;
 use stdClass;
 use JsonSerializable;
 use InvalidArgumentException;
+use Lvandi\OmnisendSDK\Traits\JsonSerializeTrait;
 
 class Order implements JsonSerializable
 {

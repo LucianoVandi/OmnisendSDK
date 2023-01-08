@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Lvandi\OmnisendSDK\Types;
 
 use JsonSerializable;
+use Lvandi\OmnisendSDK\Traits\JsonSerializeTrait;
 
 class ChannelObject implements JsonSerializable
 {

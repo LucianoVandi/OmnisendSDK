@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lvandi\OmnisendSDK\Types;
+namespace Lvandi\OmnisendSDK\Traits;
 
 trait JsonSerializeTrait
 {

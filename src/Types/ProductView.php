@@ -8,6 +8,7 @@ use stdClass;
 use ReflectionClass;
 use JsonSerializable;
 use ReflectionProperty;
+use Lvandi\OmnisendSDK\Traits\JsonSerializeTrait;
 use Lvandi\OmnisendSDK\Exceptions\MissingRequiredPropertyException;
 
 class ProductView implements JsonSerializable

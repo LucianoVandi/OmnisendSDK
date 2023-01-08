@@ -6,6 +6,7 @@ namespace Lvandi\OmnisendSDK\Types;
 
 use JsonSerializable;
 use InvalidArgumentException;
+use Lvandi\OmnisendSDK\Traits\JsonSerializeTrait;
 
 class Campaign implements JsonSerializable
 {
