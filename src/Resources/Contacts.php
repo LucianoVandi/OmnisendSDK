@@ -8,6 +8,7 @@ use Exception;
 use Lvandi\OmnisendSDK\Types\Contact;
 use Lvandi\OmnisendSDK\Responses\ContactResponse;
 use Lvandi\OmnisendSDK\Responses\ContactsListResponse;
+use Lvandi\OmnisendSDK\Exceptions\MissingRequiredPropertyException;
 
 class Contacts extends BaseResource
 {
@@ -87,7 +88,7 @@ class Contacts extends BaseResource
      * @param string|null $email
      * @param string|null $contactId
      * @return ContactResponse
-     * @throws Exception
+     * @throws MissingRequiredPropertyException
      */
     public function update(Contact $contact, ?string $email, ?string $contactId = null): ContactResponse
     {
@@ -99,7 +100,7 @@ class Contacts extends BaseResource
         } elseif (! is_null($email)) {
             $options['query']['email'] = $email;
         } else {
-            throw new Exception('Contact ID or Email must be supplied!');
+            throw new MissingRequiredPropertyException('Contact ID or Email must be supplied!');
         }
 
         $response = $this->httpClient->sendRequest($uri, 'PATCH', $options);

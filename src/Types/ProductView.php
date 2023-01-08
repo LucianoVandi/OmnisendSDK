@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Lvandi\OmnisendSDK\Types;
 
 use stdClass;
-use Exception;
 use ReflectionClass;
 use JsonSerializable;
 use ReflectionProperty;
+use Lvandi\OmnisendSDK\Exceptions\MissingRequiredPropertyException;
 
 class ProductView implements JsonSerializable
 {
@@ -370,13 +370,17 @@ class ProductView implements JsonSerializable
         return $requiredProps;
     }
 
+    /**
+     * @param array $attributes
+     * @return void
+     */
     private function ensureHasRequiredProps(array $attributes): void
     {
         $requiredProps = $this->getRequiredProps();
 
         foreach ($requiredProps as $prop) {
             if (! array_key_exists($prop, $attributes)) {
-                throw new Exception('Missing required property: '.$prop);
+                throw new MissingRequiredPropertyException('Property required: '.$prop);
             }
         }
     }
