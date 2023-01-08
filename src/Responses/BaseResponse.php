@@ -21,7 +21,7 @@ abstract class BaseResponse
         // 204 status code means empty response, then we set
         // the body to an empty array for custom response processing
         $this->decodedBody = 204 !== $response->getStatusCode()
-            ? json_decode($response->getBody())
+            ? json_decode((string)$response->getBody())
             : [];
     }
 
