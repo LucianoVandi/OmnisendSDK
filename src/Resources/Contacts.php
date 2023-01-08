@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Resources;
 
+use Exception;
 use Lvandi\OmnisendSDK\Types\Contact;
 use Lvandi\OmnisendSDK\Responses\ContactResponse;
 use Lvandi\OmnisendSDK\Responses\ContactsListResponse;
@@ -40,7 +43,7 @@ class Contacts extends BaseResource
      * @param array|null $filters
      * @param int|null $limit default 100, max 250
      * @return ContactsListResponse
-     * @throws \Exception
+     * @throws Exception
      */
     public function list(?array $filters = null, ?int $limit = 100): ContactsListResponse
     {
@@ -84,7 +87,7 @@ class Contacts extends BaseResource
      * @param string|null $email
      * @param string|null $contactId
      * @return ContactResponse
-     * @throws \Exception
+     * @throws Exception
      */
     public function update(Contact $contact, ?string $email, ?string $contactId = null): ContactResponse
     {
@@ -96,7 +99,7 @@ class Contacts extends BaseResource
         } elseif (! is_null($email)) {
             $options['query']['email'] = $email;
         } else {
-            throw new \Exception('Contact ID or Email must be supplied!');
+            throw new Exception('Contact ID or Email must be supplied!');
         }
 
         $response = $this->httpClient->sendRequest($uri, 'PATCH', $options);

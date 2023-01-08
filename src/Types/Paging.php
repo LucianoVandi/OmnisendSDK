@@ -1,6 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
+
+use stdClass;
 
 class Paging
 {
@@ -12,7 +16,7 @@ class Paging
 
     private int $limit;
 
-    public function __construct(\stdClass $paging)
+    public function __construct(stdClass $paging)
     {
         $this->previous = $paging->previous ?? null;
         $this->next = $paging->next ?? null;

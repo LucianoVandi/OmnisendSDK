@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Tests;
 
+use Exception;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use Lvandi\OmnisendSDK\Types\Product;
@@ -59,7 +62,7 @@ class ProductsTest extends TestCase
         $filePath = './tests/fixtures/'.$fileName;
 
         if (! file_exists($filePath)) {
-            throw new \Exception('Fixture not found');
+            throw new Exception('Fixture not found');
         }
 
         return (string) file_get_contents($filePath);

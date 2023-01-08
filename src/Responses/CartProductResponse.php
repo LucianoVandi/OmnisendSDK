@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Responses;
 
+use stdClass;
 use Psr\Http\Message\ResponseInterface;
 
 class CartProductResponse extends BaseResponse
@@ -21,7 +24,7 @@ class CartProductResponse extends BaseResponse
         $body = $this->getDecodedBody();
 
         if (is_object($body)) {
-            /** @var \stdClass $body */
+            /** @var stdClass $body */
             $this->cartID = $body->cartID;
             $this->cartProductID = $body->cartProductID;
             $this->productID = $body->productID;

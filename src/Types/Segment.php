@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class Segment implements \JsonSerializable
+use JsonSerializable;
+
+class Segment implements JsonSerializable
 {
     use JsonSerializeTrait;
 

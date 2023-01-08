@@ -1,8 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class ProductView implements \JsonSerializable
+use stdClass;
+use Exception;
+use ReflectionClass;
+use JsonSerializable;
+use ReflectionProperty;
+
+class ProductView implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -28,7 +36,7 @@ class ProductView implements \JsonSerializable
 
     private ?string $vendor;
 
-    private ?\stdClass $callbacks;
+    private ?stdClass $callbacks;
 
     /**
      * @param array $attributes
@@ -323,18 +331,18 @@ class ProductView implements \JsonSerializable
     }
 
     /**
-     * @return \stdClass|null
+     * @return stdClass|null
      */
-    public function getCallbacks(): ?\stdClass
+    public function getCallbacks(): ?stdClass
     {
         return $this->callbacks;
     }
 
     /**
-     * @param \stdClass|null $callbacks
+     * @param stdClass|null $callbacks
      * @return ProductView
      */
-    public function setCallbacks(?\stdClass $callbacks): ProductView
+    public function setCallbacks(?stdClass $callbacks): ProductView
     {
         $this->callbacks = $callbacks;
 
@@ -348,8 +356,8 @@ class ProductView implements \JsonSerializable
     {
         $requiredProps = [];
 
-        $reflection = new \ReflectionClass($this);
-        $properties = $reflection->getProperties(\ReflectionProperty::IS_PRIVATE);
+        $reflection = new ReflectionClass($this);
+        $properties = $reflection->getProperties(ReflectionProperty::IS_PRIVATE);
 
         foreach ($properties as $property) {
             if ($property->getType()->allowsNull()) {
@@ -368,7 +376,7 @@ class ProductView implements \JsonSerializable
 
         foreach ($requiredProps as $prop) {
             if (! array_key_exists($prop, $attributes)) {
-                throw new \Exception('Missing required property: '.$prop);
+                throw new Exception('Missing required property: '.$prop);
             }
         }
     }

@@ -1,8 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class Address implements \JsonSerializable
+use stdClass;
+use JsonSerializable;
+
+class Address implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -30,7 +35,7 @@ class Address implements \JsonSerializable
 
     private ?string $postalCode;
 
-    public function __construct(\stdClass $address)
+    public function __construct(stdClass $address)
     {
         $this->firstName = $address->firstName;
         $this->lastName = $address->lastName;

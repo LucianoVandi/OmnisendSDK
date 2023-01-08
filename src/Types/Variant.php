@@ -1,8 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class Variant implements \JsonSerializable
+use stdClass;
+use JsonSerializable;
+
+class Variant implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -24,7 +29,7 @@ class Variant implements \JsonSerializable
 
     private ?object $customFields;
 
-    public function __construct(\stdClass $variant)
+    public function __construct(stdClass $variant)
     {
         $this->variantID = $variant->variantID;
         $this->title = $variant->title;

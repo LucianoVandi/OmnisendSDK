@@ -1,6 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
+
+use stdClass;
 
 class Event
 {
@@ -18,7 +22,7 @@ class Event
 
     private ?array $fields;
 
-    public function __construct(\stdClass $data)
+    public function __construct(stdClass $data)
     {
         $this->eventId = $data->eventID ?? null;
         $this->name = $data->name ?? null;
@@ -77,7 +81,7 @@ class Event
     }
 
     /**
-     * @return array<\stdClass>
+     * @return array<stdClass>
      */
     public function getFields(): array
     {

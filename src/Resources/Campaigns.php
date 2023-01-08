@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Resources;
 
+use Exception;
 use Lvandi\OmnisendSDK\Types\Campaign;
 use Lvandi\OmnisendSDK\Responses\CampaignResponse;
 use Lvandi\OmnisendSDK\Responses\CampaignListResponse;
@@ -48,7 +51,7 @@ class Campaigns extends BaseResource
      * @param int|null $limit
      * @param int|null $offset
      * @return CampaignListResponse
-     * @throws \Exception
+     * @throws Exception
      */
     public function list(
         ?array $filters = null,
@@ -99,7 +102,7 @@ class Campaigns extends BaseResource
      * @param int|null $limit
      * @param int|null $offset
      * @return CampaignContactListResponse
-     * @throws \Exception
+     * @throws Exception
      */
     public function listContacts(
         string $campaignID,

@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class Identifier implements \JsonSerializable
+use JsonSerializable;
+
+class Identifier implements JsonSerializable
 {
     use JsonSerializeTrait;
 

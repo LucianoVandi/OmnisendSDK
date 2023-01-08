@@ -1,8 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class CampaignStat implements \JsonSerializable
+use stdClass;
+use JsonSerializable;
+
+class CampaignStat implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -12,7 +17,7 @@ class CampaignStat implements \JsonSerializable
 
     private ?int $tablet;
 
-    public function __construct(\stdClass $campaignStat)
+    public function __construct(stdClass $campaignStat)
     {
         $this->desktop = $campaignStat->desktop;
         $this->mobile = $campaignStat->mobile;

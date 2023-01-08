@@ -36,5 +36,14 @@ return (new PhpCsFixer\Config())
             'keep_multiple_spaces_after_comma' => true,
         ],
         'single_trait_insert_per_statement' => true,
+        'global_namespace_import' =>  [
+            'import_classes' => true,
+            'import_constants' => true,
+            'import_functions' => true
+        ],
+        'declare_strict_types' => true,
+        'yoda_style' => true,
+        'simplified_if_return' => true,
+        'no_useless_else' => true,
     ])
     ->setFinder($finder);

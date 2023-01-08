@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\HttpClients;
 
 use GuzzleHttp\Client;
+use InvalidArgumentException;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\ClientException;
 use Lvandi\OmnisendSDK\Contracts\HttpClient;
@@ -37,7 +40,7 @@ class GuzzleClient implements HttpClient
         $this->resetError();
 
         if (! in_array($method, ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])) {
-            throw new \InvalidArgumentException();
+            throw new InvalidArgumentException();
         }
 
         $requestOptions = [

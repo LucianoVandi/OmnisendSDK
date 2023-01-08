@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Resources;
 
+use Exception;
 use Lvandi\OmnisendSDK\Contracts\HttpClient;
 
 abstract class BaseResource
@@ -18,7 +21,7 @@ abstract class BaseResource
      *
      * @param array $filters
      * @return array
-     * @throws \Exception
+     * @throws Exception
      */
     protected function applyFilters(array $filters): array
     {
@@ -26,7 +29,7 @@ abstract class BaseResource
         $calleeFiltersVarName = $callee.'Filters';
 
         if (! isset($this->$calleeFiltersVarName)) {
-            throw new \Exception('This method does not implement filters');
+            throw new Exception('This method does not implement filters');
         }
 
         $validFilters = [];

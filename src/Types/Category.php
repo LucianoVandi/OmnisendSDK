@@ -1,10 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
+use JsonSerializable;
 use InvalidArgumentException;
 
-class Category implements \JsonSerializable
+class Category implements JsonSerializable
 {
     use JsonSerializeTrait;
 

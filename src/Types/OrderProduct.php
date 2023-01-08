@@ -1,8 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class OrderProduct implements \JsonSerializable
+use stdClass;
+use JsonSerializable;
+
+class OrderProduct implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -36,7 +41,7 @@ class OrderProduct implements \JsonSerializable
     /** @var array<string>|null */
     private ?array $tags;
 
-    public function __construct(\stdClass $product)
+    public function __construct(stdClass $product)
     {
         $this->productID = $product->productID;
         $this->variantID = $product->variantID;

@@ -1,8 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class StatByDevice implements \JsonSerializable
+use stdClass;
+use JsonSerializable;
+
+class StatByDevice implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -10,7 +15,7 @@ class StatByDevice implements \JsonSerializable
 
     private ?CampaignStat $clicked;
 
-    public function __construct(\stdClass $statByDevice)
+    public function __construct(stdClass $statByDevice)
     {
         $this->opened = new CampaignStat($statByDevice->opened);
         $this->clicked = new CampaignStat($statByDevice->clicked);

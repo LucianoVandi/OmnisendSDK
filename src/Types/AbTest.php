@@ -1,8 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class AbTest implements \JsonSerializable
+use stdClass;
+use JsonSerializable;
+
+class AbTest implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -28,7 +33,7 @@ class AbTest implements \JsonSerializable
 
     private ?int $unsubscribed;
 
-    public function __construct(\stdClass $abTest)
+    public function __construct(stdClass $abTest)
     {
         $this->winner = $abTest->winner;
         $this->fromName = $abTest->fromName;

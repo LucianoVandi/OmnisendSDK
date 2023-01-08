@@ -1,10 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
+use stdClass;
+use JsonSerializable;
 use InvalidArgumentException;
 
-class Order implements \JsonSerializable
+class Order implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -136,7 +140,7 @@ class Order implements \JsonSerializable
     /** @var array<OrderProduct>|null */
     private ?array $products;
 
-    private ?\stdClass $customFields;
+    private ?stdClass $customFields;
 
     /**
      * @param array|object $data
@@ -849,18 +853,18 @@ class Order implements \JsonSerializable
     }
 
     /**
-     * @return \stdClass|null
+     * @return stdClass|null
      */
-    public function getCustomFields(): ?\stdClass
+    public function getCustomFields(): ?stdClass
     {
         return $this->customFields;
     }
 
     /**
-     * @param \stdClass|null $customFields
+     * @param stdClass|null $customFields
      * @return Order
      */
-    public function setCustomFields(?\stdClass $customFields): Order
+    public function setCustomFields(?stdClass $customFields): Order
     {
         $this->customFields = $customFields;
 

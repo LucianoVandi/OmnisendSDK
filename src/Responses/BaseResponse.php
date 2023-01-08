@@ -1,14 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Responses;
 
+use stdClass;
 use Psr\Http\Message\ResponseInterface;
 
 abstract class BaseResponse
 {
     protected ResponseInterface $response;
 
-    /** @var array|\stdClass */
+    /** @var array|stdClass */
     private $decodedBody;
 
     public function __construct(ResponseInterface $response)
@@ -17,7 +20,7 @@ abstract class BaseResponse
 
         // 204 status code means empty response, then we set
         // the body to an empty array for custom response processing
-        $this->decodedBody = $response->getStatusCode() !== 204
+        $this->decodedBody = 204 !== $response->getStatusCode()
             ? json_decode($response->getBody())
             : [];
     }
@@ -33,7 +36,7 @@ abstract class BaseResponse
     }
 
     /**
-     * @return array|mixed|\stdClass
+     * @return array|mixed|stdClass
      */
     protected function getDecodedBody()
     {

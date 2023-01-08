@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\HttpClients;
 
 use Lvandi\OmnisendSDK\Contracts\HttpClientFactory;

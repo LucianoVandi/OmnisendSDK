@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Resources;
 
 use Lvandi\OmnisendSDK\Types\Category;

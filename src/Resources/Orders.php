@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Resources;
 
+use Exception;
 use Lvandi\OmnisendSDK\Types\Order;
 use Lvandi\OmnisendSDK\Responses\OrderResponse;
 use Lvandi\OmnisendSDK\Responses\OrderListResponse;
@@ -117,7 +120,7 @@ class Orders extends BaseResource
      * @param int|null $offset
      * @param string|null $sort
      * @return OrderListResponse
-     * @throws \Exception
+     * @throws Exception
      */
     public function list(
         ?array $filters = null,

@@ -1,10 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
+use stdClass;
+use JsonSerializable;
 use InvalidArgumentException;
 
-class CartProduct implements \JsonSerializable
+class CartProduct implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -35,7 +39,7 @@ class CartProduct implements \JsonSerializable
     private ?string $productUrl;
 
     /**
-     * @param array|\stdClass $data
+     * @param array|stdClass $data
      * @return CartProduct
      */
     public static function fromRawData($data): CartProduct

@@ -1,8 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class Image implements \JsonSerializable
+use stdClass;
+use JsonSerializable;
+
+class Image implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -17,7 +22,7 @@ class Image implements \JsonSerializable
      */
     private ?array $variantIDs;
 
-    public function __construct(\stdClass $image)
+    public function __construct(stdClass $image)
     {
         $this->imageID = $image->imageID;
         $this->url = $image->url;

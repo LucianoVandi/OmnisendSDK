@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Tests;
 
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Handler\MockHandler;
 use Psr\Http\Message\ResponseInterface;
@@ -50,7 +53,7 @@ class GuzzleClientTest extends TestCase
             'handler' => new HandlerStack($mock),
         ]);
 
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
 
         $client->sendRequest('/', 'WRONG');
     }

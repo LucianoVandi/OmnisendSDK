@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class ChannelObject implements \JsonSerializable
+use JsonSerializable;
+
+class ChannelObject implements JsonSerializable
 {
     use JsonSerializeTrait;
 

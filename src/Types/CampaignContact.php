@@ -1,8 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
-class CampaignContact implements \JsonSerializable
+use stdClass;
+use JsonSerializable;
+
+class CampaignContact implements JsonSerializable
 {
     use JsonSerializeTrait;
 
@@ -22,7 +27,7 @@ class CampaignContact implements \JsonSerializable
 
     private ?bool $unsubscribed;
 
-    public function __construct(\stdClass $contact)
+    public function __construct(stdClass $contact)
     {
         $this->email = $contact->email;
         $this->contactID = $contact->contactID;

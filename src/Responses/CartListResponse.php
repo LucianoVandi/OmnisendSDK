@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Responses;
 
+use stdClass;
 use Lvandi\OmnisendSDK\Types\Cart;
 use Lvandi\OmnisendSDK\Types\Paging;
 use Psr\Http\Message\ResponseInterface;
@@ -17,7 +20,7 @@ class CartListResponse extends BaseResponse
     {
         parent::__construct($response);
 
-        /** @var \stdClass $body */
+        /** @var stdClass $body */
         $body = $this->getDecodedBody();
 
         if (! empty($body->carts)) {

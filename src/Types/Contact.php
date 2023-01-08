@@ -1,11 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Types;
 
 use stdClass;
+use JsonSerializable;
 use InvalidArgumentException;
 
-class Contact implements \JsonSerializable
+class Contact implements JsonSerializable
 {
     use JsonSerializeTrait;
 

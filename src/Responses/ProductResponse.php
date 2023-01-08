@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lvandi\OmnisendSDK\Responses;
 
 use Lvandi\OmnisendSDK\Types\Product;
