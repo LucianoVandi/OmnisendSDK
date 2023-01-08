@@ -18,6 +18,8 @@ jobs:
 
       - name: PHPCsFixer Coding Standard
         uses: zalexki/php-cs-fixer-action@master
+        with:
+          other_cmds: '--dry-run --diff --allow-risky=yes'
   static-analysis:
     runs-on: ubuntu-latest
     steps:
@@ -30,6 +32,7 @@ jobs:
         uses: php-actions/phpstan@v3
         with:
           path: src/ examples/ tests/
+          memory_limit: -1
   build-test:
     runs-on: ubuntu-latest
     steps:
@@ -43,7 +46,7 @@ jobs:
         with:
           php_extensions: xdebug
           bootstrap: vendor/autoload.php
-          configuration: test/phpunit.xml.dist
+          configuration: ./phpunit.xml.dist
           args: --coverage-text
         env:
           XDEBUG_MODE: coverage
