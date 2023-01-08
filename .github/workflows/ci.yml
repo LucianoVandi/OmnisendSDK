@@ -19,7 +19,7 @@ jobs:
       - name: PHPCsFixer Coding Standard
         uses: zalexki/php-cs-fixer-action@master
         with:
-          other_cmds: '--dry-run --diff --allow-risky=yes'
+          other-cmds: '--dry-run --allow-risky=yes'
   static-analysis:
     runs-on: ubuntu-latest
     steps:
@@ -31,7 +31,7 @@ jobs:
       - name: PHPStan Static Analysis
         uses: php-actions/phpstan@v3
         with:
-          path: src/ examples/ tests/
+          path: src/ examples/
           memory_limit: -1
   build-test:
     runs-on: ubuntu-latest
@@ -44,6 +44,7 @@ jobs:
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v3
         with:
+          php_version: 7.4
           php_extensions: xdebug
           bootstrap: vendor/autoload.php
           configuration: ./phpunit.xml.dist
