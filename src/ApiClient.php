@@ -5,6 +5,7 @@ namespace Lvandi\OmnisendSDK;
 use Lvandi\OmnisendSDK\Resources\Carts;
 use Lvandi\OmnisendSDK\Resources\Events;
 use Lvandi\OmnisendSDK\Resources\Orders;
+use Lvandi\OmnisendSDK\Types\ProductView;
 use Lvandi\OmnisendSDK\Resources\Contacts;
 use Lvandi\OmnisendSDK\Resources\Products;
 use Lvandi\OmnisendSDK\Resources\Campaigns;
@@ -80,7 +81,7 @@ class ApiClient
         return $this->httpClient->getRateLimitRemaining();
     }
 
-    public function getSnippet(string $accountID, bool $trackPageview = true): string
+    public static function getSnippet(string $accountID, bool $trackPageview = true): string
     {
         $snippet = [
             '<script type="text/javascript">',
@@ -91,6 +92,17 @@ class ApiClient
             'e.type="text/javascript",e.async=!0,e.src="https://omnisnippet1.com/inshop/launcher-v2.js";',
             'var t=document.getElementsByTagName("script")[0];',
             't.parentNode.insertBefore(e,t)}();',
+            '</script>',
+        ];
+
+        return implode('', $snippet);
+    }
+
+    public static function trackProductViewEvent(ProductView $productView): string
+    {
+        $snippet = [
+            '<script type="text/javascript">',
+                'omnisend.push(["track", "$productViewed", '.$productView->toJsObject().'])',
             '</script>',
         ];
 
