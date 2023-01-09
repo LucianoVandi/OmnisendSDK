@@ -1,0 +1,51 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: ["develop", "master"]
+  pull_request:
+    branches: ["develop", "master"]
+
+permissions:
+  contents: read
+
+jobs:
+  coding-standard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: PHPCsFixer Coding Standard
+        uses: docker://oskarstark/php-cs-fixer-ga
+        with:
+          args: '--dry-run --allow-risky=yes'
+  static-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: php-actions/composer@v6
+        with:
+          php_version: 7.4
+
+      - name: PHPStan Static Analysis
+        uses: php-actions/phpstan@v3
+        with:
+          path: src/ examples/
+          memory_limit: -1
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: php-actions/composer@v6
+        with:
+          php_version: 7.4
+
+      - name: PHPUnit Tests
+        uses: php-actions/phpunit@v3
+        with:
+          php_version: 7.4
+          php_extensions: xdebug
+          bootstrap: vendor/autoload.php
+          configuration: ./phpunit.xml.dist
+          args: --coverage-text
+        env:
+          XDEBUG_MODE: coverage
